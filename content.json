@@ -1,0 +1,354 @@
+[
+  {
+    "slug": "ecommerce-analytics",
+    "keyword": "ecommerce analytics",
+    "category": "Analytics & Decision Systems",
+    "title": "Ecommerce Analytics: A Practical Guide to Connecting Store, Ad, and Finance Data",
+    "description": "Connect orders, advertising and costs without double-counting revenue. A practical ecommerce analytics workflow, sample data contract, and AI prompt.",
+    "answer": "Ecommerce analytics turns order, advertising, customer, and cost data into decisions about growth and profitability. Start by defining the business question, then align reporting periods, currencies, identifiers, and metric definitions. A connected data layer can make those inputs reusable, but it cannot replace missing costs, sound analysis, or human judgment.",
+    "takeaways": [
+      "Choose a decision before choosing a dashboard.",
+      "Aggregate each source to a compatible grain before joining it.",
+      "Keep store revenue, attributed revenue, contribution, and cash separate."
+    ],
+    "visual": [
+      "Store orders",
+      "Advertising",
+      "Costs and fees",
+      "A defensible business answer"
+    ],
+    "sections": [
+      {
+        "q": "What should ecommerce analytics actually help you decide?",
+        "text": "The useful starting point is not “How many metrics can we track?” It is “What would we do differently if we knew the answer?” A US merchant selling on Amazon and a direct-to-consumer store might need to fund a promotion, replenish a product, or investigate a deteriorating margin. Those decisions need different inputs.\n\nFor a promotion review, begin with fulfilled demand, discounts, returns, product costs, and incremental marketing expense. For a checkout investigation, start with sessions and funnel events. For a cash question, examine payment and settlement timing. Putting all three on one chart does not make them interchangeable.\n\nWrite a decision contract: “On Monday, the growth lead will decide whether to maintain the current promotion using two complete weeks of net sales and variable contribution.” Name an owner, a cutoff, and the evidence that would change the decision. This is the first deliverable; the dashboard comes later."
+      },
+      {
+        "q": "Which data do you need from stores, advertising, and finance?",
+        "text": "Use a small data contract before connecting more systems. The fields below describe a recommended analytical model, not a promise that every connector exposes these exact column names. Map them to the actual schema and preserve source identifiers.",
+        "table": {
+          "caption": "A minimum viable ecommerce data contract",
+          "headers": [
+            "Dataset and grain",
+            "Fields to retain",
+            "Question answered"
+          ],
+          "rows": [
+            [
+              "One row per order line",
+              "Store/account, order ID, line ID, SKU, status, event time, currency, sales, discount",
+              "What was sold, where, and when?"
+            ],
+            [
+              "Campaign × reporting day",
+              "Account, campaign, date, spend, clicks, attributed sales, attribution setting",
+              "What demand did we pay to acquire?"
+            ],
+            [
+              "SKU × cost-effective period",
+              "SKU, effective dates, unit cost, fulfillment assumptions, currency",
+              "What contribution remains?"
+            ],
+            [
+              "One financial event",
+              "Event ID, order reference when available, posted date, amount, event type",
+              "Why do sales, contribution, and cash differ?"
+            ]
+          ]
+        },
+        "after": "An order line and a campaign-day are different units of observation, often called their grain. Never join every order directly to every campaign on date alone. Ten order lines and three campaigns can produce thirty rows. Aggregate first to a justified shared level, such as channel and business day, or use an explicitly documented allocation method."
+      },
+      {
+        "q": "How do you reconcile revenue without counting it twice?",
+        "text": "Give each revenue measure a separate name. Store net merchandise sales answer an order-economics question. An advertising platform’s attributed sales answer a credit-allocation question. Payouts answer a cash-timing question. Add neither ad-attributed sales to store sales nor payouts to revenue.\n\nFor this management view, define net merchandise sales as gross merchandise sales less discounts and returns, excluding tax and shipping revenue. This is a chosen convention, not a universal platform or accounting definition. Keep shipping revenue and related costs as explicit lines when material. Finance should approve the convention before it becomes recurring.\n\nUse three reconciliation tests: totals before versus after joins; missing or duplicated business keys; and date boundaries around refunds and cancellations. A reconciliation bridge can contain an unexplained residual. Showing that residual is better than forcing agreement through an undocumented adjustment."
+      },
+      {
+        "q": "What does a connected profit analysis look like?",
+        "text": "Consider this synthetic monthly example in USD. Costs follow the same management reporting convention; these are not customer results or an audited income statement.",
+        "table": {
+          "caption": "Illustrative contribution bridge—not customer data",
+          "headers": [
+            "Line",
+            "Amount"
+          ],
+          "rows": [
+            [
+              "Net merchandise sales",
+              "$120,000"
+            ],
+            [
+              "Product costs",
+              "−$42,000"
+            ],
+            [
+              "Variable fulfillment and transaction costs",
+              "−$18,000"
+            ],
+            [
+              "Advertising",
+              "−$30,000"
+            ],
+            [
+              "Contribution before fixed overhead",
+              "$30,000"
+            ]
+          ]
+        },
+        "after": "Contribution is $120,000 − $42,000 − $18,000 − $30,000 = $30,000, or 25% of net merchandise sales. If the cost file covers only 80% of units, do not publish that margin as complete. Show the covered share, uncosted units, and a clearly labeled estimate or range.\n\nNext investigate volume, net price, product mix, unit cost, fulfillment, and advertising. Aggregate totals point to an investigation; they do not establish causation. A cheaper product mix can lower average order value even when no individual product’s price changes."
+      },
+      {
+        "q": "Where does Hologrow fit in the analytics workflow?",
+        "text": "[Hologrow describes its role as a commerce data layer](https://docs.hologrow.ai/platform): connecting supported accounts and preparing available data for AI workflows. Treat that as infrastructure, not proof that every source or finance definition is covered.\n\nBefore asking a question, inspect the actual tables in the [Hologrow schema](https://docs.hologrow.ai/hologrow-data/data-schema). Orders × Ads × ERP is a useful profit-investigation pattern only when the required cost and fee inputs exist. A connection cannot manufacture missing landed-cost history.\n\nThe [Hologrow ChatGPT integration](https://www.hologrow.ai/integration/ai/chatgpt) is a starting point for conversational analysis. Keep source reports and calculation specifications with the answer. Maintain approved definitions as business context; do not assume a custom profit-definition product feature exists simply because an AI can apply a formula you provide."
+      },
+      {
+        "q": "How should you ask AI for a source-backed answer?",
+        "prompt": "For our US business, compare the last two complete reporting weeks. First list accounts, table coverage, time zones, and freshness. Reconcile net merchandise sales before analyzing contribution. State the cost definition and uncosted share. Return the three largest changes with sources, calculations, uncertainty, and the next evidence needed. Do not modify source accounts.",
+        "text": "Run two passes. First validate scope and arithmetic. Then request explanations the evidence supports. Reject an answer that turns correlation into causation or substitutes attributed sales for actual orders.\n\nA weekly review needs four outputs: a decision, its evidence, an unresolved question, and a named next action. Preserve that packet so the following week starts from consistent definitions rather than another debate about what “revenue” means."
+      }
+    ],
+    "related": [
+      "ecommerce-analytics-tools",
+      "omnichannel-analytics"
+    ]
+  },
+  {
+    "slug": "amazon-seller-tools",
+    "keyword": "amazon seller tools",
+    "category": "Amazon Data",
+    "title": "Best Amazon Seller Tools for Analytics, Profit, Ads, and AI Workflows",
+    "description": "Choose Amazon seller tools by job: operations, product research, advertising, profit analysis, and AI-ready first-party data. Includes a practical evaluation test.",
+    "answer": "The best Amazon seller tools depend on the job: managing orders, researching demand, measuring ads, calculating profit, or investigating your own data with AI. Start with Amazon’s native tools, then add software for a specific gap. Evaluate data coverage and verifiable outputs rather than buying the longest feature list.",
+    "takeaways": [
+      "Best means best fit for a task—not one universal winner.",
+      "Market estimates and first-party financial records serve different purposes.",
+      "Test one real business question before adding a subscription."
+    ],
+    "visual": [
+      "Operate",
+      "Measure",
+      "Investigate",
+      "Choose tools by the job"
+    ],
+    "sections": [
+      {
+        "q": "Which Amazon seller tools belong on a practical shortlist?",
+        "text": "A seller looking for “Amazon tools” may have five different problems. A launch team needs demand research. A channel manager needs operational control. Finance needs a credible cost model. Paid media needs campaign reporting. An analyst needs evidence across these systems.\n\nThis is an editorial shortlist by use case, based on linked official descriptions checked October 10, 2026. It is not an exhaustive ranking or an independent hands-on benchmark. Eligibility, pricing, and data access require account-level verification.",
+        "table": {
+          "caption": "A task-based Amazon seller tool shortlist",
+          "headers": [
+            "Job",
+            "Starting point",
+            "Selection caution"
+          ],
+          "rows": [
+            [
+              "Operations",
+              "[Seller Central](https://sell.amazon.com/tools/seller-central)",
+              "Keep order and inventory actions in an authorized operational system."
+            ],
+            [
+              "Demand research",
+              "[Product Opportunity Explorer](https://sell.amazon.com/tools/product-opportunity-explorer)",
+              "Market opportunity signals do not establish realized profit."
+            ],
+            [
+              "Fulfillment scenarios",
+              "[Amazon Revenue Calculator](https://sell.amazon.com/pricing/estimate)",
+              "A cost estimate is not a reconciliation of actual fees."
+            ],
+            [
+              "Advertising measurement",
+              "[Amazon Ads reporting](https://advertising.amazon.com/library/guides/intro-attribution-campaign-reporting)",
+              "Read attribution and scope definitions."
+            ],
+            [
+              "Cross-source AI analysis",
+              "[Hologrow](https://www.hologrow.ai/)",
+              "Verify source tables, history, and cost inputs."
+            ]
+          ]
+        }
+      },
+      {
+        "q": "Which tools are best for product research rather than business analysis?",
+        "text": "A new product decision asks whether demand exists, how differentiated the offer is, and whether economics survive realistic assumptions. Amazon’s Product Opportunity Explorer is one starting point for demand and niche research. That job differs from analyzing actual orders and fees for a product already on sale.\n\nKeep a launch hypothesis separate from an operating report. Label modeled sales as a forecast. Preserve the source and reporting date on realized orders. Never relabel a competitor estimate as verified competitor revenue.\n\nBefore adding a research subscription, name the missing input: search-demand context, assortment visibility, or a faster opportunity comparison. Do not buy a second research interface to solve a missing cost ledger. The latter requires cost ownership, not more market estimates."
+      },
+      {
+        "q": "How should you evaluate Amazon advertising tools?",
+        "text": "First decide whether the tool must explain performance, recommend changes, or execute changes. Reporting and bidding software are not interchangeable. A read-only workflow can support campaign review without changing bids.\n\n[Amazon defines ACOS and ROAS](https://advertising.amazon.com/library/guides/acos-advertising-cost-of-sales) using ad spend and ad-attributed sales. These ratios express efficiency under the report’s measurement rules; neither deducts the entire cost stack.\n\nIn a synthetic example, $2,400 spend and $12,000 attributed sales yield 20% ACOS and 5× ROAS. Whether this is acceptable depends on costs, objectives, and measurement. A launch campaign and a mature branded campaign may need different thresholds. Check conversion maturity before calling a term “no sales”: recently reported outcomes may be revised.\n\nFor software that executes actions, require a separate permissions review and audit trail. The Hologrow workflow discussed here is analytical, not a recommendation to automate bidding."
+      },
+      {
+        "q": "What makes a profit tool different from a fee calculator?",
+        "text": "A calculator answers a scenario: “What could this item contribute under these assumptions?” A realized-profit workflow must account for actual discounts, refunds, cost changes, and fees. Confusing these outputs makes a launch forecast look like a financial result.\n\nUse the Revenue Calculator for scenario work and reconcile actual operations separately. Ask any profit tool how it treats return timing, reimbursements, storage expenses, advertising, and missing costs. There is no meaningful profit percentage without knowing what was deducted.\n\nAn acceptance test should include a returned item, a changed unit cost, and an expense posted later. The tool does not have to eliminate timing differences. It must expose them so finance can choose a consistent treatment. “Unknown” is preferable to a zero that silently overstates profit."
+      },
+      {
+        "q": "When is Hologrow the right kind of tool to evaluate?",
+        "text": "Evaluate Hologrow when the gap is preparing authorized commerce data for AI investigation, rather than finding competitors or operating Seller Central. Its [product overview](https://www.hologrow.ai/) positions it as a read-only data layer. Check the [documented schema](https://docs.hologrow.ai/hologrow-data/data-schema) against the decision you actually need to make.\n\nFor example: “Which products grew revenue while contribution weakened?” The answer may need orders, ads, fees, returns, and cost context. Check each input before judging the narrative.\n\nRequest source totals and unjoined records alongside explanations. If ERP cost history is missing, the useful result is a limitation and next step, not an invented margin. Keep existing operational tools where they already solve their job well."
+      },
+      {
+        "q": "How can you test the shortlist before committing?",
+        "prompt": "Compare two complete US reporting periods for our five highest-revenue products. List the accounts and data available first. Show sales, advertising, refunds, and covered costs separately. Identify missing evidence and provide sources for every conclusion. Do not change listings, prices, inventory, or campaigns.",
+        "text": "Score the trial on reproducibility. Can another analyst reproduce a selected total? Can the reviewer see which source changed after refresh? Does missing cost remain visibly missing? Can the connection be revoked?\n\nChoose the smallest combination that covers the workflow. Native Amazon operations, a cost model, and a connected analytical layer can be complementary rather than competing purchases.\n\nInclude setup, report maintenance, reconciliation, and training in ownership cost. A tool is only simpler if the team can run it when the person who configured it is on vacation."
+      }
+    ],
+    "related": [
+      "amazon-seller-software",
+      "ecommerce-ai"
+    ]
+  },
+  {
+    "slug": "ai-for-ecommerce",
+    "keyword": "ai for ecommerce",
+    "category": "Commerce Operations",
+    "title": "AI for Ecommerce: 15 High-Value Use Cases Using Your Own Business Data",
+    "description": "Fifteen practical ecommerce AI use cases with required data, useful outputs, and limits—from contribution analysis to settlement reconciliation.",
+    "answer": "AI for ecommerce is most useful when it answers a specific operating question with your own authorized data. High-value uses include explaining contribution changes, finding reporting discrepancies, and prioritizing investigations. Connect the necessary sources, define the calculation, request traceable evidence, and keep consequential business actions under human control.",
+    "takeaways": [
+      "Start with recurring questions that have usable evidence.",
+      "Missing cost or inventory history limits what AI can conclude.",
+      "Use AI to prepare investigations, not invent causes or execute unapproved actions."
+    ],
+    "visual": [
+      "15 questions",
+      "Required inputs",
+      "Evidence and limits",
+      "An own-data use-case library"
+    ],
+    "sections": [
+      {
+        "q": "Which AI use cases help explain revenue and profit?",
+        "text": "The fifteen use cases below are proposed analytical workflows, not claims that one product automatically delivers every result. Each output needs a period, scope, calculation, and account of missing evidence.",
+        "table": {
+          "caption": "Use cases 1–5: commercial economics",
+          "headers": [
+            "Use case",
+            "Required data",
+            "Output and limitation"
+          ],
+          "rows": [
+            [
+              "1. Contribution bridge: why did profit fall?",
+              "Orders, refunds, costs, fees, fulfillment, ads",
+              "Dollar bridge by driver. Not net profit if fixed overhead is excluded."
+            ],
+            [
+              "2. Discount review: did the promotion pay?",
+              "Promotion dates, discounts, units, costs, returns, baseline",
+              "Contribution per order. Before/after change is not causal lift."
+            ],
+            [
+              "3. Product-mix analysis: why did AOV change?",
+              "Order lines, quantity, net price, product groups",
+              "Price versus mix effects. Basket analysis needs order detail."
+            ],
+            [
+              "4. Return concentration: what needs investigation?",
+              "Sales cohorts, refunds, units, reasons where available",
+              "Mature-cohort patterns. Recent orders have less time to return."
+            ],
+            [
+              "5. Cost-coverage audit: how much margin is unknown?",
+              "Sold units, effective-dated costs, SKU mappings",
+              "Uncosted units and sales share. Missing cost must not become zero."
+            ]
+          ]
+        },
+        "after": "Start with case 5 when the cost file is unreliable. Otherwise the first two cases can generate precise-looking answers built on incomplete economics. An accurate list of records to repair can be more valuable than a premature recommendation to spend more."
+      },
+      {
+        "q": "Which use cases connect advertising to store outcomes?",
+        "table": {
+          "caption": "Use cases 6–10: acquisition and conversion",
+          "headers": [
+            "Use case",
+            "Required data",
+            "Output and limitation"
+          ],
+          "rows": [
+            [
+              "6. Ad review queue",
+              "Spend, clicks, attributed results, reporting windows",
+              "Review candidates, not automatic proof of waste."
+            ],
+            [
+              "7. Funnel break diagnosis",
+              "Sessions and funnel events from one system; order totals separately",
+              "Step deterioration by segment. Validate tracking first."
+            ],
+            [
+              "8. Landing-page mismatch",
+              "Campaign URLs, landing pages, device, available events",
+              "Segments to inspect. Aggregate data cannot reconstruct every journey."
+            ],
+            [
+              "9. Blended acquisition review",
+              "Acquisition spend, defined new-customer cohort, orders",
+              "Cost per eligible new customer. New-to-brand differs from DTC new-to-file."
+            ],
+            [
+              "10. Attribution discrepancy review",
+              "Orders, ad reports, model and window settings",
+              "A differences register. Do not add platforms’ credited sales together."
+            ]
+          ]
+        },
+        "after": "For funnel work, the [Google Analytics ecommerce guide](https://developers.google.com/analytics/devguides/collection/ga4/ecommerce) documents shopping events, including cart, checkout, purchase, and refund activity. Implementation still needs testing; reports cannot reveal an event never sent by the storefront.\n\nChoose case 10 before case 6 when platform disagreement is large enough to alter the decision. Otherwise your review queue may prioritize measurement differences instead of weak campaigns. Separate “the report is wrong” from “the campaign is weak” before assigning an owner."
+      },
+      {
+        "q": "Which use cases improve operations and reporting?",
+        "table": {
+          "caption": "Use cases 11–15: operational investigation",
+          "headers": [
+            "Use case",
+            "Required data",
+            "Output and limitation"
+          ],
+          "rows": [
+            [
+              "11. Settlement bridge",
+              "Financial events, fees, refunds, reserves where available, bank receipt",
+              "Explained deductions and residual. Unmatched cash is not proof of money owed."
+            ],
+            [
+              "12. Stockout exposure",
+              "Inventory history, demand, replenishment context",
+              "Availability-linked risk periods. Current stock cannot prove past stockouts."
+            ],
+            [
+              "13. Retention cohorts",
+              "Permitted customer key, first and repeat orders, refunds",
+              "Equal-window cohorts. Do not infer identities from weak matches."
+            ],
+            [
+              "14. Catalog mapping audit",
+              "ASINs, variants, merchant SKUs, bundle definitions",
+              "Unmapped or ambiguous products. Similar titles do not justify a join."
+            ],
+            [
+              "15. Weekly operating brief",
+              "Approved metrics, snapshots, prior decisions, owners",
+              "Evidence-backed changes and open questions. No invented completed actions."
+            ]
+          ]
+        },
+        "after": "Case 15 belongs at the end of the workflow. A concise summary depends on stable calculations beneath it. In settlement work, preserve financial-event categories: mapping every deduction to “fees” hides the difference you wanted to explain. The goal is a reviewable bridge, not an artificially tidy answer."
+      },
+      {
+        "q": "How do you choose the first three AI workflows?",
+        "text": "Prioritize frequency, business consequence, and evidence readiness. Score each from one to three as a planning aid, not as a scientific model. A frequent question with reliable inputs is a better pilot than a dramatic question with no essential data.\n\nA team with clean orders and advertising but no historical inventory should begin with approved weekly metrics, attribution differences, and an ad review queue. It should not start by estimating revenue lost to stockouts.\n\nDefine success before the pilot: one question, a reviewer, an output format, and an agreed reconciliation tolerance. Measure preparation time and correction time separately. Saving drafting time is not a success if finance then spends longer repairing the answer.\n\nInclude a “no decision yet” outcome in the evaluation. A system that correctly identifies inadequate evidence is behaving better than one that always generates a confident recommendation."
+      },
+      {
+        "q": "How does Hologrow support own-data workflows?",
+        "text": "Hologrow is relevant at the preparation stage. Compare each use case’s input requirements with the [source schema](https://docs.hologrow.ai/hologrow-data/data-schema), then follow the [AI integration workflow](https://www.hologrow.ai/integration/ai/chatgpt). The use-case list is not a substitute for verifying your connected accounts.\n\nA profit investigation needs cost evidence; a funnel investigation needs usable events. A common conversational interface does not make those requirements the same.\n\nBefore recurring analysis, inspect connection health in [Data Explorer](https://docs.hologrow.ai/hologrow-basics/data-explorer), a monitor of sync and coverage rather than a SQL editor. Keep the decision owner responsible for reviewing the result even when preparation is automated."
+      },
+      {
+        "q": "What should every ecommerce AI prompt include?",
+        "prompt": "Investigate [one decision] for [accounts] during [complete dates]. Begin with source coverage and missing inputs. Use [approved metric definition]. Return an evidence table, calculation, alternative explanations, confidence limits, and the next check for the owner. Distinguish observations from hypotheses. Do not execute business changes.",
+        "text": "Make the stopping rule explicit: if an input is absent, explain what remains answerable. AI may report revenue and spend changes without calculating contribution. That is an accurate partial answer, not failed analysis.\n\nSave a reviewed prompt, metric definitions, and a small non-sensitive test dataset. Repeat the test when a connector or business rule changes. Distinguish source problems, formula problems, and interpretation problems.\n\nMost operating reviews can begin with aggregates. Avoid customer-level details unless the task needs them and access is authorized. Better questions often reduce both analytical noise and unnecessary data exposure."
+      }
+    ],
+    "related": [
+      "ecommerce-ai",
+      "ecommerce-analytics"
+    ]
+  }
+]

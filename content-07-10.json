@@ -1,0 +1,436 @@
+[
+  {
+    "slug": "shopify-ai",
+    "keyword": "shopify ai",
+    "category": "Commerce Operations",
+    "title": "Shopify AI: Using Store Data for Analysis vs Selling Through AI Assistants",
+    "description": "Understand the difference between AI for operating your Shopify business and AI shopping channels. Learn what data, permissions, and measurement each requires.",
+    "answer": "Shopify AI can mean two different things: tools a merchant uses to operate or analyze a store, and AI channels where shoppers discover products. These workflows use different data and permissions. Connecting private business data for analysis does not automatically improve product discovery or guarantee recommendations in a shopper’s AI answer.",
+    "takeaways": [
+      "Merchant analysis and shopper discovery are separate workflows.",
+      "Review each tool’s actual permissions; not every AI connection is read-only.",
+      "Product recommendations and AI citations cannot be guaranteed."
+    ],
+    "visual": [
+      "Merchant analysis",
+      "Private business data",
+      "Shopper discovery",
+      "Two workflows, different evidence"
+    ],
+    "sections": [
+      {
+        "q": "What are the two meanings of Shopify AI?",
+        "text": "The first meaning is merchant-side assistance: helping a store owner work with business information or supported store-management tasks. The second is shopper-side discovery: helping a customer find products through an AI channel. A successful implementation of one does not establish the other.\n\nShopify explicitly separates these topics in its [third-party AI tools guidance](https://help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools). Make the distinction before choosing a connector or writing a product-discovery strategy.",
+        "table": {
+          "caption": "Merchant AI versus shopper AI",
+          "headers": [
+            "Dimension",
+            "Merchant analysis and operations",
+            "Shopper product discovery"
+          ],
+          "rows": [
+            [
+              "Primary user",
+              "Store owner, analyst, operator",
+              "Potential customer"
+            ],
+            [
+              "Typical question",
+              "Why did contribution weaken?",
+              "Which product fits my needs?"
+            ],
+            [
+              "Evidence",
+              "Authorized orders, ads, costs, operational context",
+              "Eligible catalog information and public product facts"
+            ],
+            [
+              "Permission question",
+              "What can the tool read or change?",
+              "Which channels can access product information?"
+            ],
+            [
+              "Success measure",
+              "Reliable answer or approved task completion",
+              "Qualified discovery, visits, and commercial outcomes"
+            ]
+          ]
+        },
+        "after": "Keep both projects on the roadmap if needed, but assign different owners and acceptance tests. A finance investigation should not be judged by product impressions; a discovery project should not be judged by how quickly it summarizes internal sales."
+      },
+      {
+        "q": "Can AI analyze your own Shopify orders and advertising?",
+        "text": "It can assist when the necessary data is available through an authorized integration or a controlled export. The hard part is usually specifying scope and definitions: which store, which orders, what refund treatment, which cost basis, and which reporting period.\n\nFor example, “Why did revenue rise while contribution fell?” may require order lines, discounts, returns, product costs, fulfillment expenses, and advertising. Orders alone cannot answer the entire question. An assistant should state what is missing before calculating a margin.\n\nStart with a small, reviewable task. Ask for source totals and a reconciliation bridge before requesting recommendations. Preserve the source identifiers needed for validation without including unnecessary customer details.\n\nIf you use several stores, verify account scope explicitly. A natural-language answer that silently analyzes the wrong store can sound perfectly plausible. Always make the store or account name part of the evidence packet."
+      },
+      {
+        "q": "Can a Shopify AI tool change my store?",
+        "text": "Capabilities depend on the integration and the permissions you authorize. Shopify documents third-party tools that can support store-management tasks. Do not assume every AI connection is read-only, or assume every connected tool can change paid orders, inventory, or money.\n\nSeparate analysis authority from action authority. Reading a report does not imply permission to publish products or adjust settings. Review the tool’s current permissions, the connected store, access revocation, and the human confirmation process for consequential changes.\n\nFor an analytical pilot, use the minimum scope needed. Have the operator verify outputs before any separate operational action. Keep this boundary visible in prompts and team procedures, rather than relying on the assistant to infer your risk tolerance.\n\n[Hologrow’s product positioning](https://www.hologrow.ai/) is read-only data preparation. That is a different role from a store-management integration with write capabilities; do not describe them as equivalent."
+      },
+      {
+        "q": "How does selling through ChatGPT differ from analyzing store data?",
+        "text": "As checked October 10, 2026, Shopify describes ChatGPT as a discovery-focused referral channel. Customers complete the purchase through the merchant’s online-store checkout, shown in an in-app browser or a browser tab. Shopify’s current eligibility guidance includes selling to US customers and meeting catalog and policy requirements. See [Selling on ChatGPT](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/chatgpt).\n\nThis public shopping workflow does not require exposing private margin analyses to shoppers. Product facts, availability, policies, and eligibility belong to the discovery project; private operating records belong to the merchant-analysis project.\n\nDo not turn channel eligibility into a promise of placement. Being available to a catalog or crawler is not the same as being selected for a specific recommendation. Measure actual qualified visits and outcomes rather than treating a setup confirmation as growth.\n\nFor the broader channel picture, consult [Shopify agentic storefronts](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts). Channel behavior can change, so revisit official requirements before rollout."
+      },
+      {
+        "q": "Where does Hologrow fit for a Shopify merchant?",
+        "text": "Evaluate Hologrow when the analytical question spans store, advertising, and web evidence. Its [ChatGPT integration page](https://www.hologrow.ai/integration/ai/chatgpt) describes that investigation pattern. Confirm required Shopify and advertising fields in the [data schema](https://docs.hologrow.ai/hologrow-data/data-schema) and in your connected workspace.\n\nA useful pilot is a weekly explanation of mismatched trends: ad spend increased, measured traffic changed, and store orders moved differently. Keep those as separate measurements until the evidence supports a narrower conclusion.\n\nThis workflow is not a catalog-submission service and should not be advertised as making your products appear in AI shopping answers. Likewise, private data access does not guarantee that a public article about your brand will be cited. Those outcomes depend on different systems and evidence."
+      },
+      {
+        "q": "What should your first Shopify AI project look like?",
+        "prompt": "For my named Shopify store, compare two complete US reporting weeks. Confirm connected sources and scope. Explain the differences among net sales, advertising spend, and website behavior using evidence. Flag missing costs, attribution differences, and tracking changes. Do not modify the store or infer customer identities.",
+        "text": "Give the project one owner and one decision. For analysis, require a reproducible answer with limitations. For discovery, require verified catalog facts and a measurement plan. Keep separate checklists even if the same team manages both.\n\nReview a few real outputs before expanding access or automation. Record corrections, unresolved questions, and cases where the assistant appropriately stopped. A dependable workflow is one the team can challenge and reproduce, not merely one that speaks fluently.\n\nFinally, maintain accurate public product information and authoritative internal definitions. AI does not remove the need for those assets; it makes inconsistencies between them easier to expose."
+      }
+    ],
+    "related": [
+      "shopify-analytics",
+      "ai-for-ecommerce"
+    ]
+  },
+  {
+    "slug": "shopify-analytics",
+    "keyword": "shopify analytics",
+    "category": "Analytics & Decision Systems",
+    "title": "Shopify Analytics: The Reports You Need Beyond the Native Dashboard",
+    "description": "Extend Shopify Analytics only where evidence is missing. Build sales reconciliation, contribution, acquisition, funnel, and cohort reports with clear definitions.",
+    "answer": "Shopify Analytics is the starting point for store performance, not something every merchant needs to replace. Extend it when a decision requires unavailable costs, cross-account evidence, or a different analytical workflow. Build reconciliation and contribution reports around approved definitions, while keeping website behavior and advertising attribution distinct from order revenue.",
+    "takeaways": [
+      "Check native capabilities before buying another dashboard.",
+      "A missing value is not the same as zero cost.",
+      "Reconcile definitions before trying to make Shopify and GA4 match."
+    ],
+    "visual": [
+      "Store commerce",
+      "Website behavior",
+      "Advertising credit",
+      "Three layers of evidence"
+    ],
+    "sections": [
+      {
+        "q": "When is the native Shopify dashboard enough?",
+        "text": "It is enough when the available reports answer the decision reliably and the team can explain the definitions. More software is not automatically better analytics. A single-store operator reviewing basic sales and product performance may need disciplined reporting habits before another data platform.\n\nNative capability also changes. Shopify’s current [marketing reports documentation](https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/marketing-reports) describes channel-level traffic, sales, and spend-related metrics when the necessary cost data is available. It would be misleading to say native Shopify reporting never includes advertising.\n\nBefore extending the stack, list the unanswered question and why it remains unanswered. Is the missing input a cost file, another account, historical detail, a custom management convention, or a workflow for investigating follow-up questions? Choose the extension that fills that gap."
+      },
+      {
+        "q": "Which reports should you add for business decisions?",
+        "table": {
+          "caption": "A focused reporting pack beyond a headline dashboard",
+          "headers": [
+            "Report",
+            "Purpose",
+            "Inputs and review"
+          ],
+          "rows": [
+            [
+              "Sales reconciliation",
+              "Explain gross sales, discounts, returns, tax, shipping, and payout differences",
+              "Order and refund records; finance-approved treatment"
+            ],
+            [
+              "Contribution by product or channel",
+              "Find where revenue does not produce enough contribution",
+              "Costs, fees, fulfillment, advertising; cost-coverage checks"
+            ],
+            [
+              "Acquisition economics",
+              "Compare spend with explicitly defined new-customer outcomes",
+              "Spend and eligible customer cohorts; separate attribution"
+            ],
+            [
+              "Funnel investigation",
+              "Locate behavior changes by segment",
+              "Consistent session/event system; tracking validation"
+            ],
+            [
+              "Retention cohorts",
+              "Compare repeat behavior fairly",
+              "Permitted customer key and equal observation windows"
+            ]
+          ]
+        },
+        "text": "Add a report only when it changes a decision. Each report needs an owner, cadence, definition, and a response to missing data. The same product can appear in all five, but each report is answering a different question.",
+        "after": "Avoid calling every report a profit report. A sales report does not deduct costs, a payout report follows cash timing, and a marketing report assigns credit. A small set of accurately named reports is more useful than a broad dashboard that mixes all three."
+      },
+      {
+        "q": "Why do Shopify, GA4, and advertising reports disagree?",
+        "text": "They observe different events and use different rules. The order system records commerce activity. Web analytics measures instrumented behavior. An advertising system credits outcomes under an attribution method and window. Time zones, consent, delayed data, scope, and implementation can all affect comparisons.\n\nShopify documents these factors in its [analytics discrepancies guide](https://help.shopify.com/en/manual/reports-and-analytics/discrepancies). Treat disagreement as a question to classify, not proof that one entire system is unusable.\n\nUse a synthetic example: your store records $50,000 in the defined net-sales view, GA4 reports $43,000 in tracked purchase revenue, and two advertising platforms each claim some overlapping portion of sales. The correct total is not the sum of all three. First align tax, shipping, refund, date, and channel conventions. Then investigate tracking coverage and attribution separately.\n\nDo not impose an arbitrary “acceptable match rate.” Define tolerances based on the decision and known measurement limits, and preserve the unexplained residual."
+      },
+      {
+        "q": "How do you build a contribution view without overstating accuracy?",
+        "text": "Write the formula before building the chart. One management convention is net merchandise sales minus product cost, variable fulfillment, transaction costs, and advertising. State what is excluded, such as fixed payroll or overhead. Obtain finance review rather than labeling the result net profit.\n\nLink costs to the period in which they apply. Replacing every historical unit cost with the latest cost changes the past and can create a false trend. Keep a visible cost-coverage indicator and a list of unmapped products.\n\nAdvertising allocation also needs a rule. When direct product-level evidence is unavailable, a proportional allocation may be useful for planning, but it remains an allocation—not observed product-level causation. Show the rule and preserve a channel-total reconciliation.\n\nRefunds deserve separate treatment. A refund posted this month may relate to an older order. Decide whether the report is a period view or a sales-cohort view, and do not switch between them mid-series."
+      },
+      {
+        "q": "What changed in session reporting that merchants should check?",
+        "text": "Shopify’s [September 2026 session measurement update](https://help.shopify.com/en/manual/reports-and-analytics/discrepancies/session-measurement-update) affects comparisons across the rollout. When session-based metrics shift, annotate the measurement break and compare commercial totals alongside them. A higher reported conversion rate does not by itself demonstrate an improved store experience.\n\nFor funnel diagnosis, stay within one analytics system and use comparable periods and filters. Converted sessions and order counts need not be equal. For retention, use equal observation windows: a customer acquired last week has not had the same chance to repeat as one acquired six months ago.\n\nThese checks sound modest, but they prevent two common mistakes: celebrating a denominator change as a commercial win, and mistaking an immature cohort for a retention problem. Definitions are operational controls, not footnotes to add after publication."
+      },
+      {
+        "q": "How can Hologrow help with questions beyond one report?",
+        "text": "Consider [Hologrow’s cross-channel AI workflow](https://www.hologrow.ai/integration/ai/chatgpt) when a question repeatedly crosses store, web, and advertising evidence. First check the [schema](https://docs.hologrow.ai/hologrow-data/data-schema) for the fields the question needs. It should complement useful native reports, not replace them by default.",
+        "prompt": "Explain the difference between our Shopify net-sales view, tracked website purchase revenue, and ad-attributed sales for the same complete period. List definitions, dates, currency, accounts, and missing evidence. Build a reconciliation register and suggest checks. Do not force the totals to match or count missing spend as zero.",
+        "after": "Keep the native report as an operational reference and preserve a reviewed calculation specification for the extended view. If a source or field is unavailable, narrow the claim. A well-scoped answer about sales and spend is better than a complete-looking margin that lacks costs.\n\nEnd the weekly review with an action owner and the next validation step. The value of extending Shopify Analytics is a better decision—not merely another place to see the same chart."
+      }
+    ],
+    "related": [
+      "ecommerce-conversion-rate",
+      "shopify-ai"
+    ]
+  },
+  {
+    "slug": "ecommerce-ai",
+    "keyword": "ecommerce ai",
+    "category": "Analytics & Decision Systems",
+    "title": "Ecommerce AI: What It Can Answer When Your Data Is Connected",
+    "description": "Follow one evidence-backed investigation of rising revenue and falling contribution. Learn what connected ecommerce AI can calculate—and what it cannot prove.",
+    "answer": "Connected ecommerce AI can help explain what changed in your business when the required source data and definitions are available. It can reconcile totals, calculate drivers, and organize follow-up questions. It cannot recover missing costs, prove causation from aggregate trends, or turn an unsupported explanation into a reliable business decision.",
+    "takeaways": [
+      "Use an answer contract before asking for a business explanation.",
+      "A contribution bridge explains arithmetic, not necessarily causation.",
+      "Return evidence, competing explanations, and a bounded next action."
+    ],
+    "visual": [
+      "Observed change",
+      "Reconciled drivers",
+      "Unresolved causes",
+      "From question to evidence"
+    ],
+    "sections": [
+      {
+        "q": "What changes when AI has access to your business data?",
+        "text": "Without your operating evidence, an assistant can describe common reasons for a margin decline. With relevant data, it can help test which observed changes actually occurred. That distinction matters: “discounting can hurt margin” is general advice; “discount-adjusted sales grew while fulfillment and ad expense grew faster” is a statement that can be checked.\n\nConnected access still has boundaries. The account scope may be incomplete, cost history absent, or a source stale. The first response should inventory what can be analyzed, not jump straight to a narrative.\n\nUse an answer contract: name the question, accounts, time period, metric definition, required evidence, and stopping rule. For this article, the question is why contribution declined while net merchandise sales increased. The output is a reproducible period-to-period bridge, not an automated budget decision."
+      },
+      {
+        "q": "What evidence is needed to explain rising revenue and falling contribution?",
+        "table": {
+          "caption": "Question-to-evidence map for one investigation",
+          "headers": [
+            "Question",
+            "Evidence needed",
+            "What remains unknown without it"
+          ],
+          "rows": [
+            [
+              "Did comparable sales grow?",
+              "Order lines, discounts, returns, scope and dates",
+              "Whether apparent growth is a definition change"
+            ],
+            [
+              "Did product economics worsen?",
+              "Units and effective-dated product costs",
+              "Actual cost and mix effects"
+            ],
+            [
+              "Did fulfillment become more expensive?",
+              "Relevant fees and shipment or fulfillment costs",
+              "Whether costs rose with units, rate, or service mix"
+            ],
+            [
+              "Did advertising consume more contribution?",
+              "Spend by included account and period",
+              "The complete expense change"
+            ],
+            [
+              "Why did each driver move?",
+              "Product, campaign, availability, and operating context",
+              "Causation and the appropriate intervention"
+            ]
+          ]
+        },
+        "text": "The last row is deliberately separate. A complete arithmetic bridge does not establish why buyers behaved differently or what the next action will cause. Cost completeness is necessary for contribution analysis, but it is not sufficient for causal inference.",
+        "after": "Inspect source totals and join keys before calculating the bridge. When two systems use different product identifiers, request a mapping exception report. A product disappearing in a join can look like a genuine sales decline."
+      },
+      {
+        "q": "What does a correct contribution bridge look like?",
+        "text": "The following synthetic USD example is for instruction only, not a Hologrow customer result. Net merchandise sales exclude tax and shipping revenue. The displayed cost categories do not overlap; fixed overhead is excluded.",
+        "table": {
+          "caption": "Illustrative two-period contribution bridge",
+          "headers": [
+            "Management line",
+            "Period A",
+            "Period B",
+            "Effect on contribution"
+          ],
+          "rows": [
+            [
+              "Net merchandise sales",
+              "$100,000",
+              "$120,000",
+              "+$20,000"
+            ],
+            [
+              "Product costs",
+              "$35,000",
+              "$45,000",
+              "−$10,000"
+            ],
+            [
+              "Variable fulfillment and transaction costs",
+              "$15,000",
+              "$21,000",
+              "−$6,000"
+            ],
+            [
+              "Advertising",
+              "$20,000",
+              "$28,000",
+              "−$8,000"
+            ],
+            [
+              "Contribution before fixed overhead",
+              "$30,000",
+              "$26,000",
+              "−$4,000"
+            ]
+          ]
+        },
+        "after": "Sales grew 20%, but contribution fell $4,000, or about 13.3%. Contribution margin fell from 30.0% to about 21.7%, a decline of 8.3 percentage points. The bridge reconciles: +$20,000 − $10,000 − $6,000 − $8,000 = −$4,000.\n\nThis establishes the arithmetic. It does not prove that advertising was inefficient, fulfillment rates increased, or discounting caused growth. Product costs could rise because of volume, mix, unit cost, or multiple factors. The next pass must distinguish those possibilities."
+      },
+      {
+        "q": "How should AI separate observations from explanations?",
+        "text": "Require three labels: observed, plausible, and untested. “Advertising expense rose by $8,000” is observed if the included reports reconcile. “New-customer acquisition became less efficient” is only plausible until comparable customer outcomes and definitions are checked. “Reducing spend will increase profit next month” is a prediction that needs additional reasoning and monitoring.\n\nRequest competing explanations for each material driver. Higher fulfillment expense may reflect more units, heavier products, a different service mix, or changed rates. Compare cost per unit within a stable segment before deciding which explanation fits.\n\nFor product mix, first compare unit economics within each product, then the shares of total sales. A lower blended margin can occur even if every product’s own margin remains unchanged. Preserve that distinction in the written answer.\n\nThe best next action is often a targeted check: inspect a fee category, validate a cost change, or review a specific campaign cohort. Do not let a fluent summary skip the evidence that would resolve uncertainty."
+      },
+      {
+        "q": "Where can Hologrow help, and where must the team supply context?",
+        "text": "The [Hologrow platform documentation](https://docs.hologrow.ai/platform) presents data preparation for connected AI workflows. For this investigation, compare the required evidence with the [source schema](https://docs.hologrow.ai/hologrow-data/data-schema), then use an appropriate [AI connection workflow](https://www.hologrow.ai/integration/ai/chatgpt).\n\nYour team still supplies the management definition, cost interpretation, product mappings where needed, and decision constraints. Do not infer that a connector already contains every ERP field or a customizable profit-rule feature.\n\nRead-only access separates this investigation from execution. The resulting review can suggest questions or actions for an owner, but it should not be described as automatically altering campaigns or prices. The boundary is useful precisely because an uncertain explanation should not become an irreversible business action."
+      },
+      {
+        "q": "What should you ask AI to deliver at the end?",
+        "prompt": "Explain our contribution change using the approved definition. First verify all accounts, complete periods, cost coverage, and source totals. Produce a reconciled dollar bridge. Label observations, plausible explanations, and untested hypotheses. Show calculations and missing inputs. Propose the smallest next check for each material driver. Do not execute changes.",
+        "text": "Ask for a compact decision packet: the headline, the bridge, evidence references, unresolved questions, and the owner of the next step. A reviewer should be able to reproduce one selected number without relying on the prose.\n\nKeep the raw period comparison available after the meeting. If a source revises its data, update the bridge with a revision note rather than silently replacing the old answer. This makes later decisions understandable.\n\nConnected ecommerce AI is valuable when it shortens the path from question to reviewable evidence. It is not valuable when it simply makes unsupported explanations faster to produce. The standard is an answer the team can challenge, repeat, and responsibly use."
+      }
+    ],
+    "related": [
+      "ai-for-ecommerce",
+      "ecommerce-analytics"
+    ]
+  },
+  {
+    "slug": "omnichannel-analytics",
+    "keyword": "omnichannel analytics",
+    "category": "Commerce Data Infrastructure",
+    "title": "Omnichannel Analytics: One View Across Amazon, Shopify, Ads, and Web Analytics",
+    "description": "Build a comparable view across Amazon, Shopify, advertising, and web analytics using source-aware metrics, product mappings, time zones, and currency rules.",
+    "answer": "Omnichannel analytics combines evidence across sales, advertising, and customer touchpoints so a business can evaluate the whole operation. A useful shared view preserves source definitions while standardizing only what is legitimately comparable. Align account scope, product identifiers, reporting periods, currencies, and cost rules before interpreting channel performance or shifting investment.",
+    "takeaways": [
+      "One view does not mean one attribution model or one customer identity.",
+      "Standardize compatible measures while preserving source detail.",
+      "Start with a narrow cross-channel decision and expand after reconciliation."
+    ],
+    "visual": [
+      "Account scope",
+      "Comparable metrics",
+      "Source evidence",
+      "One view without false equivalence"
+    ],
+    "sections": [
+      {
+        "q": "What does omnichannel analytics mean for an Amazon and Shopify seller?",
+        "text": "For a merchant operating Amazon and Shopify, the first practical goal is often comparable channel economics, not a perfectly reconstructed customer journey. The business wants to know where sales and contribution are growing, how advertising relates to demand, and which operational differences require attention.\n\nMultichannel reporting places channels beside each other. Omnichannel analysis asks how the combined operation behaves, including potential interactions. But interactions are not automatically measurable at the individual-customer level. A shopper may discover a product in one place and buy elsewhere without leaving a reliable, permitted identity match.\n\nBegin with a bounded question: “How did US channel contribution change last month under our approved definitions?” That can be answered more defensibly than “Show the exact journey of every customer across all platforms.” State where only aggregate evidence is available."
+      },
+      {
+        "q": "Which metrics can be combined, and which should stay separate?",
+        "table": {
+          "caption": "Cross-channel metric governance",
+          "headers": [
+            "Measure",
+            "Recommended treatment",
+            "Why"
+          ],
+          "rows": [
+            [
+              "Net merchandise sales",
+              "Combine after scope, currency, and refund rules align",
+              "Provides a comparable sales view"
+            ],
+            [
+              "Advertising expense",
+              "Combine after account deduplication and currency conversion",
+              "The same account must not enter twice"
+            ],
+            [
+              "Ad-attributed sales",
+              "Keep platform, model, and window labels",
+              "Credit may overlap across systems"
+            ],
+            [
+              "Website sessions",
+              "Keep measurement-system and channel scope",
+              "Marketplace traffic is not your DTC session denominator"
+            ],
+            [
+              "New customer or new-to-brand",
+              "Retain original definition",
+              "Different identities and lookback rules may apply"
+            ],
+            [
+              "Contribution",
+              "Combine only after cost conventions align",
+              "A channel missing costs looks artificially strong"
+            ]
+          ]
+        },
+        "text": "Use a metric registry that records the owner, formula, exclusions, source, grain, reporting calendar, and effective date. Standardize by an explicit rule, not by renaming every source field “revenue.”",
+        "after": "When definitions cannot be aligned, display them side by side with a qualification. A less tidy but honest report is preferable to a single total that silently adds incompatible measures."
+      },
+      {
+        "q": "How do you handle currencies and reporting time zones?",
+        "text": "Keep original amounts and currencies, then add a reporting-currency value using a documented conversion policy. Store the rate, rate date, and source. Do not add USD and CAD as if they were the same unit. For period comparisons, decide whether the business needs reported-currency results, constant-currency analysis, or both.\n\nTime zones require similar discipline. A timestamp is an instant; a source’s daily report is already grouped into a business day. If you only have daily aggregates, you may not be able to precisely regroup them into a different zone. Do not imply precision the source does not contain.\n\n[Hologrow’s time-zone documentation](https://docs.hologrow.ai/hologrow-data/timezones) distinguishes business dates, UTC timestamps, and sync timestamps. The last-sync time is not the time a customer ordered.\n\nFor a US management review, choose the reporting calendar deliberately and document exceptions. Use native business dates when reconciling to a source console. Use a shared calendar only where the underlying granularity supports the conversion."
+      },
+      {
+        "q": "How do you map products without inventing customer identity?",
+        "text": "Maintain a product crosswalk. Keep account, marketplace, ASIN, merchant SKU, store variant, and internal product identifier as separate fields where available. A matching product title is not enough; bundles, sizes, and pack quantities can differ.\n\nRecord whether a mapping is exact, allocated, or unresolved. A two-pack should not be treated as a one-unit equivalent without a quantity conversion. For bundles, specify whether analysis remains at bundle level or allocates to components under a stated method.\n\nKeep product mapping separate from customer identity. Knowing two channels sell the same product does not mean you can identify the same person in both. Do not merge customers from weak matches or assume marketplace buyers become an owned marketing audience.\n\nWhen mappings are incomplete, publish the unmapped sales share. Improving this coverage is a real analytical task, not housekeeping to hide beneath the final chart."
+      },
+      {
+        "q": "What can a comparable channel view reveal?",
+        "text": "This synthetic example uses consistent contribution conventions, USD, and complete monthly periods. It is not a benchmark or a customer case study.",
+        "table": {
+          "caption": "Illustrative channel economics with aligned definitions",
+          "headers": [
+            "Line",
+            "Amazon",
+            "DTC store"
+          ],
+          "rows": [
+            [
+              "Net merchandise sales",
+              "$80,000",
+              "$60,000"
+            ],
+            [
+              "Product costs",
+              "$28,000",
+              "$21,000"
+            ],
+            [
+              "Variable channel and fulfillment costs",
+              "$20,000",
+              "$9,000"
+            ],
+            [
+              "Advertising expense",
+              "$12,000",
+              "$15,000"
+            ],
+            [
+              "Contribution before fixed overhead",
+              "$20,000",
+              "$15,000"
+            ],
+            [
+              "Contribution margin",
+              "25%",
+              "25%"
+            ]
+          ]
+        },
+        "after": "Both channels show 25% contribution margin, but that alone does not settle where to invest next. Marginal acquisition costs, capacity, repeat behavior, availability, and risk can differ. Historical average economics are a starting point, not a guarantee about the next dollar.\n\nThe combined contribution is $35,000 on $140,000 of net sales. Do not add ad-attributed revenue to that denominator. If a new marketplace such as Walmart enters the review, verify source availability and definitions first; its inclusion in your strategy does not establish connector support."
+      },
+      {
+        "q": "How do you build an AI-ready omnichannel review with Hologrow?",
+        "text": "Start with the [Hologrow product overview](https://www.hologrow.ai/) and verify required sources in the [schema](https://docs.hologrow.ai/hologrow-data/data-schema). Confirm account coverage and freshness in [Data Explorer](https://docs.hologrow.ai/hologrow-basics/data-explorer). Do not treat a listed source family as evidence that every table or historical period is available in your workspace.",
+        "prompt": "Compare US channel contribution across the named Amazon and Shopify accounts for the last complete month. Inventory source coverage first. Use our metric registry, currency policy, reporting calendar, and product crosswalk. Keep attributed revenue separate. Show unmapped products, missing costs, reconciled channel totals, and unresolved evidence. Do not infer cross-channel customer identities or execute actions.",
+        "after": "Pilot one marketplace and one store before expanding. Reconcile the source totals, document residuals, and have finance approve the cost treatment. Then add another account or question without changing the baseline definitions.\n\nThe durable asset is not a screenshot called “one view.” It is the maintained relationship between sources, definitions, calculations, and decisions. That foundation supports both consistent dashboards and useful AI follow-up questions."
+      }
+    ],
+    "related": [
+      "ecommerce-analytics",
+      "shopify-analytics"
+    ]
+  }
+]

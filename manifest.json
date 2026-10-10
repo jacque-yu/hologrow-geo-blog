@@ -1,0 +1,162 @@
+[
+  {
+    "number": 1,
+    "title": "Ecommerce Analytics: A Practical Guide to Connecting Store, Ad, and Finance Data",
+    "keyword": "ecommerce analytics",
+    "slug": "ecommerce-analytics",
+    "file": "ecommerce-analytics.html",
+    "url": "https://jacque-yu.github.io/hologrow-geo-blog/ecommerce-analytics.html",
+    "words": 952,
+    "answerWords": 50,
+    "questionCount": 6,
+    "sourceCount": 3,
+    "related": [
+      "ecommerce-analytics-tools",
+      "omnichannel-analytics"
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Best Amazon Seller Tools for Analytics, Profit, Ads, and AI Workflows",
+    "keyword": "amazon seller tools",
+    "slug": "amazon-seller-tools",
+    "file": "amazon-seller-tools.html",
+    "url": "https://jacque-yu.github.io/hologrow-geo-blog/amazon-seller-tools.html",
+    "words": 880,
+    "answerWords": 49,
+    "questionCount": 6,
+    "sourceCount": 7,
+    "related": [
+      "amazon-seller-software",
+      "ecommerce-ai"
+    ]
+  },
+  {
+    "number": 3,
+    "title": "AI for Ecommerce: 15 High-Value Use Cases Using Your Own Business Data",
+    "keyword": "ai for ecommerce",
+    "slug": "ai-for-ecommerce",
+    "file": "ai-for-ecommerce.html",
+    "url": "https://jacque-yu.github.io/hologrow-geo-blog/ai-for-ecommerce.html",
+    "words": 1020,
+    "answerWords": 48,
+    "questionCount": 6,
+    "sourceCount": 4,
+    "related": [
+      "ecommerce-ai",
+      "ecommerce-analytics"
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Amazon Seller Software: How to Choose Tools for Data, Ads, Profit, and Operations",
+    "keyword": "amazon seller software",
+    "slug": "amazon-seller-software",
+    "file": "amazon-seller-software.html",
+    "url": "https://jacque-yu.github.io/hologrow-geo-blog/amazon-seller-software.html",
+    "words": 1018,
+    "answerWords": 50,
+    "questionCount": 6,
+    "sourceCount": 4,
+    "related": [
+      "amazon-seller-tools",
+      "ecommerce-analytics-tools"
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Ecommerce Conversion Rate: How to Diagnose the Drop Across Traffic, Ads, and Orders",
+    "keyword": "ecommerce conversion rate",
+    "slug": "ecommerce-conversion-rate",
+    "file": "ecommerce-conversion-rate.html",
+    "url": "https://jacque-yu.github.io/hologrow-geo-blog/ecommerce-conversion-rate.html",
+    "words": 929,
+    "answerWords": 51,
+    "questionCount": 6,
+    "sourceCount": 5,
+    "related": [
+      "shopify-analytics",
+      "ecommerce-analytics"
+    ]
+  },
+  {
+    "number": 6,
+    "title": "Best Ecommerce Analytics Tools in 2026: Dashboards vs AI-Ready Data Layers",
+    "keyword": "ecommerce analytics tools",
+    "slug": "ecommerce-analytics-tools",
+    "file": "ecommerce-analytics-tools.html",
+    "url": "https://jacque-yu.github.io/hologrow-geo-blog/ecommerce-analytics-tools.html",
+    "words": 954,
+    "answerWords": 51,
+    "questionCount": 6,
+    "sourceCount": 8,
+    "related": [
+      "amazon-seller-software",
+      "ecommerce-analytics"
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Shopify AI: Using Store Data for Analysis vs Selling Through AI Assistants",
+    "keyword": "shopify ai",
+    "slug": "shopify-ai",
+    "file": "shopify-ai.html",
+    "url": "https://jacque-yu.github.io/hologrow-geo-blog/shopify-ai.html",
+    "words": 979,
+    "answerWords": 51,
+    "questionCount": 6,
+    "sourceCount": 6,
+    "related": [
+      "shopify-analytics",
+      "ai-for-ecommerce"
+    ]
+  },
+  {
+    "number": 8,
+    "title": "Shopify Analytics: The Reports You Need Beyond the Native Dashboard",
+    "keyword": "shopify analytics",
+    "slug": "shopify-analytics",
+    "file": "shopify-analytics.html",
+    "url": "https://jacque-yu.github.io/hologrow-geo-blog/shopify-analytics.html",
+    "words": 983,
+    "answerWords": 50,
+    "questionCount": 6,
+    "sourceCount": 5,
+    "related": [
+      "ecommerce-conversion-rate",
+      "shopify-ai"
+    ]
+  },
+  {
+    "number": 9,
+    "title": "Ecommerce AI: What It Can Answer When Your Data Is Connected",
+    "keyword": "ecommerce ai",
+    "slug": "ecommerce-ai",
+    "file": "ecommerce-ai.html",
+    "url": "https://jacque-yu.github.io/hologrow-geo-blog/ecommerce-ai.html",
+    "words": 995,
+    "answerWords": 50,
+    "questionCount": 6,
+    "sourceCount": 3,
+    "related": [
+      "ai-for-ecommerce",
+      "ecommerce-analytics"
+    ]
+  },
+  {
+    "number": 10,
+    "title": "Omnichannel Analytics: One View Across Amazon, Shopify, Ads, and Web Analytics",
+    "keyword": "omnichannel analytics",
+    "slug": "omnichannel-analytics",
+    "file": "omnichannel-analytics.html",
+    "url": "https://jacque-yu.github.io/hologrow-geo-blog/omnichannel-analytics.html",
+    "words": 1004,
+    "answerWords": 50,
+    "questionCount": 6,
+    "sourceCount": 4,
+    "related": [
+      "ecommerce-analytics",
+      "shopify-analytics"
+    ]
+  }
+]

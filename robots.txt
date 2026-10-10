@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jacque-yu.github.io/hologrow-geo-blog/sitemap.xml
