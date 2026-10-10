@@ -25,7 +25,7 @@ The [Profound GEO guide](https://www.tryprofound.com/articles/generative-engine-
 |---|---|
 | Ecommerce analytics | Spreadsheet bridge separating net merchandise sales, tax, shipping and web tracking differences |
 | Amazon seller tools | Affordable ACOS calculation and three decision buckets |
-| AI for ecommerce | Fifteen individually copyable Hologrow prompts, required inputs, two-week pilot plan and acceptance criteria; length expanded at the user's request |
+| AI for ecommerce | Two-week pilot plan and acceptance criteria |
 | Amazon seller software | Annual ownership-cost comparison and authorization/exit checklist |
 | Ecommerce conversion rate | Checkout loss triage with correctly scoped Baymard findings |
 | Ecommerce analytics tools | Weighted procurement scorecard and non-negotiable data gates |

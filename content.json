@@ -286,115 +286,124 @@
     "sections": [
       {
         "q": "Which AI use cases help explain revenue and profit?",
-        "text": "Click Copy prompt for any use case, then paste it into an AI chat connected to Hologrow. No placeholders need editing: prompts use relative dates or ask for missing context. Confirm the intended accounts before analysis. These are read-only analytical workflows, not guarantees that every required dataset is connected.",
-        "after": "Start with case 5 when costs are unreliable. Fixing coverage prevents precise-looking but incomplete margin answers.",
-        "lead": "Start with a contribution bridge and a cost-coverage audit. These show whether growth is economically useful and whether enough evidence exists to calculate margin at all.",
-        "useCases": [
-          {
-            "number": 1,
-            "title": "1. Contribution bridge: why did profit fall?",
-            "required": "Orders, refunds, costs, fees, fulfillment, ads",
-            "prompt": "Use Hologrow to compare the last two complete 28-day periods. Confirm account scope, currency and cost coverage. Bridge contribution changes through net sales, product costs, fees, fulfillment and ads without double-counting. Return dollars by driver and uncosted sales share; exclude fixed overhead. Cite tables and dates. Do not invent missing costs."
-          },
-          {
-            "number": 2,
-            "title": "2. Discount review: did the promotion pay?",
-            "required": "Promotion dates, discounts, units, costs, returns, baseline",
-            "prompt": "Use Hologrow to find recent promotions in my connected store. Ask me to choose one if dates are unclear. Compare its units, discounts, returns and contribution per order with an equal-length baseline. Show cost coverage and source calculations. Flag seasonality and product-mix differences; do not label before/after changes causal lift."
-          },
-          {
-            "number": 3,
-            "title": "3. Product-mix analysis: why did AOV change?",
-            "required": "Order lines, quantity, net price, product groups",
-            "prompt": "Use Hologrow to compare order value across the last two complete months for one confirmed store. Break changes into item price, units per order and product mix. Return a product-group table with calculations and sources. Flag missing order lines, refunds or bundles; do not infer basket composition from aggregate sales."
-          },
-          {
-            "number": 4,
-            "title": "4. Return concentration: what needs investigation?",
-            "required": "Sales cohorts, refunds, units, reasons where available",
-            "prompt": "Use Hologrow to analyze returns for the three most recent monthly order cohorts with at least 60 days of observation. Use the same 60-day return window. Rank SKUs by returned-unit rate and refund value. Show denominators, source dates and available reasons. Flag missing links and small samples; do not invent causes."
-          },
-          {
-            "number": 5,
-            "title": "5. Cost-coverage audit: how much margin is unknown?",
-            "required": "Sold units, effective-dated costs, SKU mappings",
-            "prompt": "Use Hologrow to audit product-cost coverage for the last complete month. Match sold SKUs to costs valid on each sale date. Return missing or ambiguous mappings, units, net sales and the uncosted revenue share. Cite source tables. Never replace missing costs with zero; prioritize repairs by affected sales."
-          }
-        ]
+        "text": "The fifteen use cases below are proposed analytical workflows, not claims that one product automatically delivers every result. Each output needs a period, scope, calculation, and account of missing evidence.",
+        "table": {
+          "caption": "Use cases 1–5: commercial economics",
+          "headers": [
+            "Use case",
+            "Required data",
+            "Output and limitation"
+          ],
+          "rows": [
+            [
+              "1. Contribution bridge: why did profit fall?",
+              "Orders, refunds, costs, fees, fulfillment, ads",
+              "Dollar bridge by driver. Not net profit if fixed overhead is excluded."
+            ],
+            [
+              "2. Discount review: did the promotion pay?",
+              "Promotion dates, discounts, units, costs, returns, baseline",
+              "Contribution per order. Before/after change is not causal lift."
+            ],
+            [
+              "3. Product-mix analysis: why did AOV change?",
+              "Order lines, quantity, net price, product groups",
+              "Price versus mix effects. Basket analysis needs order detail."
+            ],
+            [
+              "4. Return concentration: what needs investigation?",
+              "Sales cohorts, refunds, units, reasons where available",
+              "Mature-cohort patterns. Recent orders have less time to return."
+            ],
+            [
+              "5. Cost-coverage audit: how much margin is unknown?",
+              "Sold units, effective-dated costs, SKU mappings",
+              "Uncosted units and sales share. Missing cost must not become zero."
+            ]
+          ]
+        },
+        "after": "Start with case 5 when the cost file is unreliable. Otherwise the first two cases can generate precise-looking answers built on incomplete economics. An accurate list of records to repair can be more valuable than a premature recommendation to spend more.",
+        "lead": "Start with a contribution bridge and a cost-coverage audit. These show whether growth is economically useful and whether enough evidence exists to calculate margin at all."
       },
       {
         "q": "Which use cases connect advertising to store outcomes?",
-        "after": "The [Google Analytics ecommerce guide](https://developers.google.com/analytics/devguides/collection/ga4/ecommerce) documents shopping events. Verify implementation: a report cannot recover events never collected. Resolve material attribution discrepancies before judging campaigns.",
-        "lead": "Use AI to prioritize campaign, landing-page, and attribution investigations. Keep website behavior separate from platform credit so a reported discrepancy does not automatically become a budget-cut recommendation.",
-        "useCases": [
-          {
-            "number": 6,
-            "title": "6. Ad review queue",
-            "required": "Spend, clicks, attributed results, reporting windows",
-            "prompt": "Use Hologrow to review campaigns over the last complete 28 days. Confirm accounts and each report’s attribution window and freshness. Rank spend with weak mature results, showing spend, clicks, attributed sales, ACOS or ROAS and sample size. Cite sources; flag incomplete conversion data. Return review candidates only; do not change campaigns."
-          },
-          {
-            "number": 7,
-            "title": "7. Funnel break diagnosis",
-            "required": "Sessions and funnel events from one system; order totals separately",
-            "prompt": "Use Hologrow to compare the last two complete weeks of GA4 funnel events by device. Show counts and consistently defined step rates for product views, cart, checkout and purchase. Check tracking changes and freshness before ranking deterioration. Cite sources and missing events. If only event counts exist, do not claim a user-level funnel."
-          },
-          {
-            "number": 8,
-            "title": "8. Landing-page mismatch",
-            "required": "Campaign URLs, landing pages, device, available events",
-            "prompt": "Use Hologrow to compare campaign landing URLs and GA4 landing-page performance for the last complete 28 days. Rank high-traffic, weak-converting URL-device segments. Show spend only where mappings support it, plus sessions, purchases and sample sizes. Cite sources and flag unavailable joins. Recommend pages to inspect; do not claim causal mismatch."
-          },
-          {
-            "number": 9,
-            "title": "9. Blended acquisition review",
-            "required": "Acquisition spend, defined new-customer cohort, orders",
-            "prompt": "Use Hologrow to calculate acquisition cost for the last complete month, separately by store. Confirm acquisition spend and the new-customer definition first. Return spend, eligible new customers, calculation and source coverage. Keep Amazon new-to-brand separate from DTC first-order customers. Do not deduplicate people across channels without a reliable permitted identifier."
-          },
-          {
-            "number": 10,
-            "title": "10. Attribution discrepancy review",
-            "required": "Orders, ad reports, model and window settings",
-            "prompt": "Use Hologrow to compare store sales with ad-attributed sales for the last complete month. Confirm accounts, currencies, time zones and reporting windows. Return a discrepancy register covering scope, tax, refunds, attribution and freshness, with source totals and unexplained residuals. Never add credited sales across platforms or force them to equal orders."
-          }
-        ]
+        "table": {
+          "caption": "Use cases 6–10: acquisition and conversion",
+          "headers": [
+            "Use case",
+            "Required data",
+            "Output and limitation"
+          ],
+          "rows": [
+            [
+              "6. Ad review queue",
+              "Spend, clicks, attributed results, reporting windows",
+              "Review candidates, not automatic proof of waste."
+            ],
+            [
+              "7. Funnel break diagnosis",
+              "Sessions and funnel events from one system; order totals separately",
+              "Step deterioration by segment. Validate tracking first."
+            ],
+            [
+              "8. Landing-page mismatch",
+              "Campaign URLs, landing pages, device, available events",
+              "Segments to inspect. Aggregate data cannot reconstruct every journey."
+            ],
+            [
+              "9. Blended acquisition review",
+              "Acquisition spend, defined new-customer cohort, orders",
+              "Cost per eligible new customer. New-to-brand differs from DTC new-to-file."
+            ],
+            [
+              "10. Attribution discrepancy review",
+              "Orders, ad reports, model and window settings",
+              "A differences register. Do not add platforms’ credited sales together."
+            ]
+          ]
+        },
+        "after": "For funnel work, the [Google Analytics ecommerce guide](https://developers.google.com/analytics/devguides/collection/ga4/ecommerce) documents shopping events, including cart, checkout, purchase, and refund activity. Implementation still needs testing; reports cannot reveal an event never sent by the storefront.\n\nChoose case 10 before case 6 when platform disagreement is large enough to alter the decision. Otherwise your review queue may prioritize measurement differences instead of weak campaigns. Separate “the report is wrong” from “the campaign is weak” before assigning an owner.",
+        "lead": "Use AI to prioritize campaign, landing-page, and attribution investigations. Keep website behavior separate from platform credit so a reported discrepancy does not automatically become a budget-cut recommendation."
       },
       {
         "q": "Which use cases improve operations and reporting?",
-        "after": "Build the weekly brief last, after the underlying calculations have been reviewed. Keep financial-event categories distinct rather than hiding unexplained deductions under fees.",
-        "lead": "Use operational AI to organize settlement differences, availability risks, cohorts, and mapping exceptions. The best output is a specific queue with an owner and supporting records—not a generic summary of every metric.",
-        "useCases": [
-          {
-            "number": 11,
-            "title": "11. Settlement bridge",
-            "required": "Financial events, fees, refunds, reserves where available, bank receipt",
-            "prompt": "Use Hologrow to reconcile the latest completed Amazon settlement. List sales, refunds, fees, reimbursements and other available adjustments. Show the expected payout, source records and unexplained residual. If bank receipts or reserve details are unavailable, request the minimum needed evidence and mark cash reconciliation incomplete. Do not claim an unmatched amount is owed."
-          },
-          {
-            "number": 12,
-            "title": "12. Stockout exposure",
-            "required": "Inventory history, demand, replenishment context",
-            "prompt": "Use Hologrow to inspect the last complete 28 days of SKU inventory snapshots and sales. Rank availability-linked risk periods, showing snapshot gaps, stock levels, demand context and inbound inventory where available. Cite source dates. If history is missing, report current exposure only; do not invent past stockouts or lost revenue."
-          },
-          {
-            "number": 13,
-            "title": "13. Retention cohorts",
-            "required": "Permitted customer key, first and repeat orders, refunds",
-            "prompt": "Use Hologrow to build monthly first-order cohorts for one confirmed store, using an authorized pseudonymous customer key. Compare repeat-purchase rates within equal 60-day windows, excluding immature cohorts. Return cohort size, repeat buyers, net sales and refund treatment with sources. Flag missing identity history; never infer cross-channel customer matches or expose contact details."
-          },
-          {
-            "number": 14,
-            "title": "14. Catalog mapping audit",
-            "required": "ASINs, variants, merchant SKUs, bundle definitions",
-            "prompt": "Use Hologrow to audit current Amazon and store product mappings. Compare ASINs, variants, merchant SKUs and available bundle definitions. Return unmapped items, duplicate keys and ambiguous relationships with source identifiers and suggested checks. Require explicit evidence before accepting a match. Do not join products by similar titles alone or modify catalog records."
-          },
-          {
-            "number": 15,
-            "title": "15. Weekly operating brief",
-            "required": "Approved metrics, snapshots, prior decisions, owners",
-            "prompt": "Use Hologrow to draft a weekly operating brief from the last two complete weeks. Use approved metric definitions; ask for any missing ones. Summarize the three largest material changes, source calculations, coverage gaps and next checks. Separate observations from hypotheses. Use supplied owners and prior decisions only; do not invent completed actions."
-          }
-        ]
+        "table": {
+          "caption": "Use cases 11–15: operational investigation",
+          "headers": [
+            "Use case",
+            "Required data",
+            "Output and limitation"
+          ],
+          "rows": [
+            [
+              "11. Settlement bridge",
+              "Financial events, fees, refunds, reserves where available, bank receipt",
+              "Explained deductions and residual. Unmatched cash is not proof of money owed."
+            ],
+            [
+              "12. Stockout exposure",
+              "Inventory history, demand, replenishment context",
+              "Availability-linked risk periods. Current stock cannot prove past stockouts."
+            ],
+            [
+              "13. Retention cohorts",
+              "Permitted customer key, first and repeat orders, refunds",
+              "Equal-window cohorts. Do not infer identities from weak matches."
+            ],
+            [
+              "14. Catalog mapping audit",
+              "ASINs, variants, merchant SKUs, bundle definitions",
+              "Unmapped or ambiguous products. Similar titles do not justify a join."
+            ],
+            [
+              "15. Weekly operating brief",
+              "Approved metrics, snapshots, prior decisions, owners",
+              "Evidence-backed changes and open questions. No invented completed actions."
+            ]
+          ]
+        },
+        "after": "Case 15 belongs at the end of the workflow. A concise summary depends on stable calculations beneath it. In settlement work, preserve financial-event categories: mapping every deduction to “fees” hides the difference you wanted to explain. The goal is a reviewable bridge, not an artificially tidy answer.",
+        "lead": "Use operational AI to organize settlement differences, availability risks, cohorts, and mapping exceptions. The best output is a specific queue with an owner and supporting records—not a generic summary of every metric."
       },
       {
         "q": "How do you choose the first three AI workflows?",
@@ -408,12 +417,13 @@
       },
       {
         "q": "How does Hologrow support own-data workflows?",
-        "text": "Compare required inputs with the [Hologrow schema](https://docs.hologrow.ai/hologrow-data/data-schema), complete the [AI integration workflow](https://www.hologrow.ai/integration/ai/chatgpt), and paste one prompt into the connected chat. Verify sync and historical coverage in [Data Explorer](https://docs.hologrow.ai/hologrow-basics/data-explorer).\n\nIf a prompt needs unavailable cost, bank, customer or inventory history, use its missing-data instructions. A partial answer with specific evidence requests is preferable to fabricated precision.",
+        "text": "Hologrow is relevant at the preparation stage. Compare each use case’s input requirements with the [source schema](https://docs.hologrow.ai/hologrow-data/data-schema), then follow the [AI integration workflow](https://www.hologrow.ai/integration/ai/chatgpt). The use-case list is not a substitute for verifying your connected accounts.\n\nA profit investigation needs cost evidence; a funnel investigation needs usable events. A common conversational interface does not make those requirements the same.\n\nBefore recurring analysis, inspect connection health in [Data Explorer](https://docs.hologrow.ai/hologrow-basics/data-explorer), a monitor of sync and coverage rather than a SQL editor. Keep the decision owner responsible for reviewing the result even when preparation is automated.",
         "lead": "Hologrow can help prepare supported sources for these investigations. Compare the required inputs against actual connected tables; your cost definitions, review policy, and missing business context remain part of the implementation."
       },
       {
         "q": "What should every ecommerce AI prompt include?",
-        "text": "The fifteen prompts above are self-contained starting points. Retain the account scope, reporting dates and definitions with each reviewed answer. Repeat a small test when a connector or business rule changes.\n\nDo not paste raw customer details merely to make a prompt longer. Use aggregates or authorized pseudonymous identifiers where sufficient, and keep operational changes outside these analytical requests.",
+        "prompt": "Investigate [one decision] for [accounts] during [complete dates]. Begin with source coverage and missing inputs. Use [approved metric definition]. Return an evidence table, calculation, alternative explanations, confidence limits, and the next check for the owner. Distinguish observations from hypotheses. Do not execute business changes.",
+        "text": "Make the stopping rule explicit: if an input is absent, explain what remains answerable. AI may report revenue and spend changes without calculating contribution. That is an accurate partial answer, not failed analysis.\n\nSave a reviewed prompt, metric definitions, and a small non-sensitive test dataset. Repeat the test when a connector or business rule changes. Distinguish source problems, formula problems, and interpretation problems.\n\nMost operating reviews can begin with aggregates. Avoid customer-level details unless the task needs them and access is authorized. Better questions often reduce both analytical noise and unnecessary data exposure.",
         "lead": "State the decision, account scope, period, calculation, output format, and stopping condition. Tell the assistant what to do when evidence is absent, not just what result you hope to receive."
       }
     ],
@@ -423,7 +433,7 @@
     ],
     "tldr": [
       "Start with contribution changes, reporting discrepancies, and review queues: these are bounded questions with inspectable evidence.",
-      "Each of the 15 use cases includes required inputs and an individually copyable prompt for an AI chat connected to Hologrow.",
+      "The 15 use cases below specify required inputs and the useful output; they are not a list of guaranteed software features.",
       "Pilot three recurring tasks, score numerical accuracy and review effort, and keep a clear human action owner.",
       "NIST identifies confident false outputs as a generative-AI risk; require calculations and source references rather than trusting fluent explanations."
     ],
