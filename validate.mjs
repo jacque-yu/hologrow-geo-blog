@@ -6,7 +6,7 @@ const manifest=JSON.parse(fs.readFileSync(path.join(root,'manifest.json'),'utf8'
 const articles=['content.json','content-04-06.json','content-07-10.json'].flatMap(f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8')));
 const plain=s=>s.replace(/\[([^\]]+)\]\([^)]+\)/g,'$1');
 const normalize=s=>plain(s).toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
-const prose=a=>[a.answer,...a.tldr,...a.sections.flatMap(s=>[s.q,s.lead,s.text||'',s.after||'',s.prompt||'',...(s.table?[s.table.caption,...s.table.headers,...s.table.rows.flat()]:[])]),...a.faqs.flatMap(f=>[f.q,f.answer])];
+const prose=a=>[a.answer,...a.tldr,...a.sections.flatMap(s=>[s.q,s.lead,s.text||'',s.after||'',s.prompt||'',...(s.useCases||[]).flatMap(u=>[u.title,u.required,u.prompt]),...(s.table?[s.table.caption,...s.table.headers,...s.table.rows.flat()]:[])]),...a.faqs.flatMap(f=>[f.q,f.answer])];
 assert.equal(manifest.length,10);
 const files=['index.html',...manifest.map(m=>m.file)];
 const issues=[];
@@ -30,12 +30,25 @@ for(const file of files){
   const m=manifest.find(m=>m.file===file);
   assert.ok(m.answerWords>=40&&m.answerWords<=60,file+': direct answer length');
   assert.ok(m.questionCount>=5&&m.questionCount<=8,file+': question count');
-  assert.ok(m.words>=1500&&m.words<=2000,file+': article word range');
+  assert.ok(m.words>=1500&&(m.slug==='ai-for-ecommerce'||m.words<=2000),file+': article word range');
   assert.equal(m.faqCount,3);
   assert.equal(m.tldrCount,4);
   assert.ok(html.indexOf('id="tldr-title"')<html.indexOf('<figure'),file+': TLDR before illustration');
   assert.equal((html.match(/class="direct-answer"/g)||[]).length,7);
   const a=articles.find(a=>a.slug===m.slug);
+  if(a.slug==='ai-for-ecommerce'){
+   const cases=a.sections.flatMap(s=>s.useCases||[]);
+   assert.equal(cases.length,15);
+   assert.equal(new Set(cases.map(u=>u.prompt)).size,15);
+   assert.deepEqual(cases.map(u=>u.number),Array.from({length:15},(_,i)=>i+1));
+   assert.equal((html.match(/class="use-case"/g)||[]).length,15);
+   assert.equal((html.match(/class="copy"/g)||[]).length,15);
+   for(const u of cases){
+    assert.ok(u.prompt.includes('Hologrow'));
+    assert.ok(!/\[[^\]]+\]/.test(u.prompt),'No prompt placeholders');
+    assert.ok(html.includes('aria-label="Copy prompt '+u.number+'"'));
+   }
+  }
   const faq=ld['@graph'].find(n=>n['@type']==='FAQPage');
   assert.deepEqual(faq.mainEntity.map(q=>q.name),a.faqs.map(f=>f.q));
   assert.deepEqual(faq.mainEntity.map(q=>q.acceptedAnswer.text),a.faqs.map(f=>plain(f.answer)));

@@ -31,7 +31,7 @@ Ten complete English articles, following the first ten topics in the commissione
 - A 40–60-word direct answer at the start of every article.
 - A prominent four-point TL;DR before the illustration.
 - Seven question-form H2 sections with answer-first introductions, plus three customer FAQs per article.
-- Each article has 1,500–2,000 substantive English words; the generated manifest records its count.
+- Most articles have 1,500–2,000 substantive English words. The 15-use-case guide is intentionally longer, with a distinct copyable Hologrow prompt for each workflow; the generated manifest records every count.
 - Original data contracts, comparison criteria, synthetic examples, or evidence maps.
 - Product and documentation links; at least two related articles per page.
 - Visible source review date, editorial disclosure, and limitations.
