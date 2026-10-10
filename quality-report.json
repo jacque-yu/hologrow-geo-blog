@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "htmlPages": 11,
+  "articles": 10,
+  "totalArticleWords": 17969,
+  "wordRange": [
+    1675,
+    1861
+  ],
+  "wordCountScope": "Direct answer, TLDR bullets, question sections including tables and prompt labels, and customer FAQ text. Excludes navigation, illustrations, source list, CTA and related reading.",
+  "directAnswers": "40–60 words",
+  "questionSections": 70,
+  "additionalCustomerFAQs": 30,
+  "tldrBlocks": 10,
+  "checks": [
+    "H1",
+    "language",
+    "viewport",
+    "JSON-LD",
+    "visible FAQ/schema match",
+    "unique IDs",
+    "local links",
+    "anchors",
+    "canonicals",
+    "sources",
+    "related links",
+    "example arithmetic",
+    "distinct titles and descriptions",
+    "no repeated substantive paragraphs across articles"
+  ],
+  "similarity": {
+    "method": "Five-word shingle Jaccard on normalized editorial body; shared navigation, source notes and CTA excluded. A local overlap measure, not a Google score, global plagiarism check or AI detector.",
+    "repeatedParagraphs": [],
+    "highestOverlapPairs": [
+      {
+        "articles": [
+          "ecommerce-analytics",
+          "ecommerce-ai"
+        ],
+        "fiveWordShingleJaccardPercent": 0.16
+      },
+      {
+        "articles": [
+          "shopify-ai",
+          "ecommerce-ai"
+        ],
+        "fiveWordShingleJaccardPercent": 0.11
+      },
+      {
+        "articles": [
+          "amazon-seller-software",
+          "ecommerce-analytics-tools"
+        ],
+        "fiveWordShingleJaccardPercent": 0.08
+      },
+      {
+        "articles": [
+          "amazon-seller-software",
+          "shopify-ai"
+        ],
+        "fiveWordShingleJaccardPercent": 0.08
+      },
+      {
+        "articles": [
+          "amazon-seller-tools",
+          "shopify-ai"
+        ],
+        "fiveWordShingleJaccardPercent": 0.06
+      }
+    ]
+  },
+  "limitations": [
+    "No guarantee of indexing, rankings, AI citation or classifier outcomes.",
+    "No search-engine verdict, independent expert review or real customer benchmark is claimed."
+  ]
+}

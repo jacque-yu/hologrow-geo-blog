@@ -29,17 +29,21 @@ Ten complete English articles, following the first ten topics in the commissione
 ## GEO / editorial implementation
 
 - A 40–60-word direct answer at the start of every article.
-- Six question-form H2 sections per article, each addressing a different business task.
+- A prominent four-point TL;DR before the illustration.
+- Seven question-form H2 sections with answer-first introductions, plus three customer FAQs per article.
+- Each article has 1,500–2,000 substantive English words; the generated manifest records its count.
 - Original data contracts, comparison criteria, synthetic examples, or evidence maps.
 - Product and documentation links; at least two related articles per page.
 - Visible source review date, editorial disclosure, and limitations.
-- Semantic HTML, one H1, descriptive titles, descriptions, self-referencing canonicals, Open Graph metadata, BlogPosting and BreadcrumbList JSON-LD.
+- Semantic HTML, one H1, descriptive titles, descriptions, self-referencing canonicals, Open Graph metadata, BlogPosting, BreadcrumbList and visible-content-matched FAQPage JSON-LD.
 - No invented customers, ROI claims, reviewer credentials, or hands-on rankings.
 - Tables are keyboard-scrollable; navigation and copy buttons support keyboard focus; reduced-motion and print styles are included.
 - The visible question-and-answer sections do not depend on FAQ rich-result eligibility. No claim of special AI markup or guaranteed indexing/citation is made.
 - Visual direction references Hologrow’s existing light-background, lime-accent editorial template; the standalone implementation and conceptual diagrams are original.
 
 Primary technical guidance: [Google: optimizing content for AI search](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide). Product and measurement sources are linked next to the relevant statements in every article.
+
+See [revision audit](GEO-REVISION-AUDIT.md) for the Profound criteria mapping, source policy, topic differentiation and unfinished off-page work. [Automated quality report](quality-report.json) records word counts, technical checks and local text-overlap measurements; it is not a search-engine verdict or AI-detection certificate.
 
 ## Before moving to hologrow.ai
 
@@ -53,4 +57,3 @@ Primary technical guidance: [Google: optimizing content for AI search](https://d
 The project-level `robots.txt` is included for portability. On GitHub project Pages, authoritative crawler rules come from the host-root robots file, not a project subdirectory file.
 
 No private planning document, account data, credentials, or customer records are included.
-
