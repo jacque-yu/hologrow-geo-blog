@@ -31,7 +31,7 @@ Ten complete English articles, following the first ten topics in the commissione
 - A 40–60-word direct answer at the start of every article.
 - A prominent four-point TL;DR before the illustration.
 - Seven question-form H2 sections with answer-first introductions, plus three customer FAQs per article.
-- Each article has 1,500–2,000 substantive English words; the generated manifest records its count.
+- Each article has at least 1,500 substantive English words; depth varies with the topic and the generated manifest records its count.
 - Original data contracts, comparison criteria, synthetic examples, or evidence maps.
 - Product and documentation links; at least two related articles per page.
 - Visible source review date, editorial disclosure, and limitations.

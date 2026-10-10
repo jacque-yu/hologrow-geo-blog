@@ -2,10 +2,10 @@
   "status": "PASS",
   "htmlPages": 11,
   "articles": 10,
-  "totalArticleWords": 17969,
+  "totalArticleWords": 19130,
   "wordRange": [
-    1675,
-    1861
+    1739,
+    2836
   ],
   "wordCountScope": "Direct answer, TLDR bullets, question sections including tables and prompt labels, and customer FAQ text. Excludes navigation, illustrations, source list, CTA and related reading.",
   "directAnswers": "40–60 words",
@@ -62,10 +62,10 @@
       },
       {
         "articles": [
-          "amazon-seller-tools",
-          "shopify-ai"
+          "amazon-seller-software",
+          "omnichannel-analytics"
         ],
-        "fiveWordShingleJaccardPercent": 0.06
+        "fiveWordShingleJaccardPercent": 0.05
       }
     ]
   },

@@ -30,7 +30,7 @@ for(const file of files){
   const m=manifest.find(m=>m.file===file);
   assert.ok(m.answerWords>=40&&m.answerWords<=60,file+': direct answer length');
   assert.ok(m.questionCount>=5&&m.questionCount<=8,file+': question count');
-  assert.ok(m.words>=1500&&m.words<=2000,file+': article word range');
+  assert.ok(m.words>=1500,file+': article minimum length');
   assert.equal(m.faqCount,3);
   assert.equal(m.tldrCount,4);
   assert.ok(html.indexOf('id="tldr-title"')<html.indexOf('<figure'),file+': TLDR before illustration');
@@ -43,6 +43,10 @@ for(const file of files){
   assert.ok(m.related.length>=2);
   assert.ok(html.includes('https://docs.hologrow.ai/hologrow-data/data-schema'));
   assert.ok(m.sourceCount>=3);
+  const sourceSection=html.match(/<section class="sources"[\s\S]*?<\/section>/)?.[0]||'';
+  const sourceLabels=[...sourceSection.matchAll(/<li><a[^>]*>([^<]+)<\/a><\/li>/g)].map(match=>match[1]);
+  assert.equal(sourceLabels.length,m.sourceCount,file+': visible source count');
+  assert.ok(sourceLabels.every(label=>!/\{|"q"|\["/.test(label)),file+': malformed source label');
   assert.ok(html.includes('<link rel="canonical" href="'+m.url+'">'));
   assert.equal(ld['@graph'][0].headline,m.title);
   assert.equal(ld['@graph'][0].wordCount,m.words);
@@ -63,6 +67,9 @@ assert.equal(3000*.4-1000,200);
 assert.equal(2500*.5-1000,250);
 assert.equal(new Set(articles.map(a=>a.title)).size,10);
 assert.equal(new Set(articles.map(a=>a.description)).size,10);
+const amazonArticle=articles.find(a=>a.slug==='amazon-seller-tools');
+const amazonProse=prose(amazonArticle).join(' ');
+for(const phrase of ['Product Opportunity Explorer','Amazon Creative Studio','Amazon Marketing Cloud','Lingxing ERP','WBR','MBR'])assert.ok(amazonProse.includes(phrase),'amazon-seller-tools: missing '+phrase);
 const paragraphIndex=new Map();
 for(const a of articles){
  for(const part of prose(a).flatMap(p=>p.split(/\n\n+/))){

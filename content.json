@@ -150,8 +150,8 @@
     "keyword": "amazon seller tools",
     "category": "Amazon Data",
     "title": "Best Amazon Seller Tools for Analytics, Profit, Ads, and AI Workflows",
-    "description": "Choose Amazon seller tools by job: operations, product research, advertising, profit analysis, and AI-ready first-party data. Includes a practical evaluation test.",
-    "answer": "Start with Seller Central for operations, Product Opportunity Explorer for demand research, Amazon’s Revenue Calculator for fulfillment scenarios, and Amazon Ads reporting for campaign measurement. Evaluate Hologrow when you need to prepare first-party data for cross-source AI investigation. Choose additional tools only after identifying a specific gap and testing the required evidence.",
+    "description": "Choose Amazon seller tools by business job: product research, creative production, advertising analysis, profit, AMC, and cross-source AI workflows.",
+    "answer": "Choose Amazon seller tools by the decision they support: product discovery, creative production, campaign execution, profit control, or cross-source analysis. Native Amazon tools should be the baseline. Add specialist research or creative tools for a proven gap, and evaluate Hologrow when ads must be interpreted with Seller, Vendor, AMC, ERP, and cross-channel context.",
     "takeaways": [
       "Best means best fit for a task—not one universal winner.",
       "Market estimates and first-party financial records serve different purposes.",
@@ -205,14 +205,74 @@
         "lead": "Begin with native Amazon tools for the jobs they already cover, then add a product only for the missing task. There is no single best tool for both product discovery and realized-profit reconciliation."
       },
       {
-        "q": "Which tools are best for product research rather than business analysis?",
-        "text": "A new product decision asks whether demand exists, how differentiated the offer is, and whether economics survive realistic assumptions. Amazon’s Product Opportunity Explorer is one starting point for demand and niche research. That job differs from analyzing actual orders and fees for a product already on sale.\n\nKeep a launch hypothesis separate from an operating report. Label modeled sales as a forecast. Preserve the source and reporting date on realized orders. Never relabel a competitor estimate as verified competitor revenue.\n\nBefore adding a research subscription, name the missing input: search-demand context, assortment visibility, or a faster opportunity comparison. Do not buy a second research interface to solve a missing cost ledger. The latter requires cost ownership, not more market estimates.",
-        "lead": "Use demand-research tools to evaluate a potential market; use your first-party orders and costs to evaluate an existing business. Market estimates cannot tell you whether your own last shipment earned a profit."
+        "q": "How should you choose an Amazon product-research tool?",
+        "lead": "Choose a research tool by the decision stage: discover a niche, validate a shortlist, monitor price and competition, or approve a launch. No research database replaces supplier quotes, landed costs, compliance checks, and a cash plan.",
+        "text": "Start with the business decision. A team still looking for a category needs broad demand and competition signals. A team comparing three shortlisted concepts needs trend, seasonality, review, return, price, and offer history. A team ready to order inventory needs a unit-economics model and operational evidence—not another opportunity score.\n\n[Amazon Product Opportunity Explorer](https://sell.amazon.com/tools/product-opportunity-explorer) is a sensible first stop for a US seller because it uses Amazon search, browse, purchase, review, and return signals to organize customer needs into niches. It is useful for identifying unmet demand and the language shoppers use. Its own guidance also says opportunities are not guaranteed outcomes.\n\nThird-party tools can make discovery and comparison faster. [Helium 10 Black Box](https://www.helium10.com/tools/product-research/black-box/) supports filtered product and keyword shortlists across marketplaces. [Jungle Scout Opportunity Finder](https://www.junglescout.com/features/opportunity-finder/) focuses on keyword-led niches, seasonality, demand, competition, and historical views. [Keepa](https://keepa.com/) is particularly useful when price history and offer behavior matter. These are examples, not a ranking or an independent hands-on endorsement. Their estimates and proprietary scores should remain labeled as estimates.\n\nEvaluate a candidate tool with 20 products you already understand. Check whether it identifies known seasonal peaks, price changes, crowded subcategories, and obvious weak opportunities. Record where estimated sales or demand differ from your verified results. A tool that generates attractive numbers but hides marketplace, date, methodology, or history is difficult to use in an investment decision.\n\nFinally, run every shortlisted concept through five gates: durable demand, room to differentiate, realistic landed margin, cash and replenishment capacity, and compliance or return risk. A research tool may inform the first two or three gates. Your supplier, finance, operations, and legal evidence must complete the decision.",
+        "table": {
+          "caption": "Product-research tools by business job",
+          "headers": [
+            "Decision job",
+            "Useful starting points",
+            "What must be verified before acting"
+          ],
+          "rows": [
+            [
+              "Discover customer needs",
+              "Amazon Product Opportunity Explorer",
+              "Marketplace, niche definition, demand trend, search behavior, reviews, and returns"
+            ],
+            [
+              "Build a broad shortlist",
+              "Helium 10 Black Box; Jungle Scout Opportunity Finder",
+              "Estimate methodology, marketplace coverage, history, seasonality, export limits, and subscription cost"
+            ],
+            [
+              "Check price and offer history",
+              "Keepa",
+              "Price changes, offer count, sales-rank context, and gaps in tracked history"
+            ],
+            [
+              "Approve inventory investment",
+              "Supplier quotes + landed-cost and cash model",
+              "MOQ, freight, duties, fees, return allowance, ad budget, compliance, lead time, and downside case"
+            ]
+          ]
+        }
       },
       {
-        "q": "How should you evaluate Amazon advertising tools?",
-        "text": "First decide whether the tool must explain performance, recommend changes, or execute changes. Reporting and bidding software are not interchangeable. A read-only workflow can support campaign review without changing bids.\n\n[Amazon defines ACOS and ROAS](https://advertising.amazon.com/library/guides/acos-advertising-cost-of-sales) using ad spend and ad-attributed sales. These ratios express efficiency under the report’s measurement rules; neither deducts the entire cost stack.\n\nIn a synthetic example, $2,400 spend and $12,000 attributed sales yield 20% ACOS and 5× ROAS. Whether this is acceptable depends on costs, objectives, and measurement. A launch campaign and a mature branded campaign may need different thresholds. Check conversion maturity before calling a term “no sales”: recently reported outcomes may be revised.\n\nFor software that executes actions, require a separate permissions review and audit trail. The Hologrow workflow discussed here is analytical, not a recommendation to automate bidding.",
-        "lead": "Choose reporting tools when you need evidence, and action tools only when you need controlled execution. Compare ACOS with the product’s available contribution—not with a universal percentage copied from another seller."
+        "q": "Which Amazon advertising tool do you actually need?",
+        "lead": "First separate four jobs: producing creative, operating campaigns, analyzing in-platform performance, and deciding whether advertising improved the whole business. A fast creative tool cannot reconcile profit, and an attractive dashboard cannot replace bid controls or AMC analysis.",
+        "text": "For creative production, start with the asset you need to ship. [Amazon Creative Studio](https://advertising.amazon.com/en-us/resources/whats-new/unboxed-ai-creative-studio/) can generate and refine image or video concepts inside the Amazon Ads workflow. [Adobe Express](https://helpx.adobe.com/express/web/create-with-templates/text-to-template.html) can accelerate editable layouts and variations. Evaluate these tools on accepted Amazon formats, brand consistency, editability, approval workflow, localization, commercial-use terms, and time from brief to approved asset—not on the number of images generated.\n\nCampaign execution is a different purchase. Amazon's native console should be the baseline. If you need automated bids, budgets, or rules, require permission controls, change logs, guardrails, rollback, and a named human owner. Hologrow is read-only and does not change campaigns; its role is to prepare evidence and analysis for the operator.\n\nFor analysis, benchmark every tool on five dimensions: coverage, correctness, depth, business context, and actionability. Coverage means the profiles, marketplaces, campaign types, dates, and attribution views you use. Correctness means totals reconcile to a closed Amazon report after allowing for attribution and reporting lag. Depth means you can move from account to campaign, ad group, target or keyword, advertised product, and date without losing the metric definition. Business context means the analysis can include margin, organic sales, inventory, returns, promotions, and customer acquisition. Actionability means the output identifies the decision, evidence, expected trade-off, owner, and next check.\n\nA conventional advertising dashboard can organize spend, impressions, clicks, orders, sales, ACOS, and ROAS. That is useful, but it may stop at the ad account. It can tell you that a campaign is inefficient without knowing that the ASIN is about to stock out, that returns erased contribution, that branded search is capturing existing demand, or that a promotion changed conversion.\n\nHologrow MCP is useful when the decision crosses those boundaries. Its documented Amazon Ads model supports daily performance at campaign, ad group, target, and advertised-product grain, while connected Seller, Vendor, AMC, Lingxing ERP, and cross-channel sources can add commercial and operational context. That wider evidence can lead to a better recommendation than “lower the bid”: investigate a listing, separate branded from acquisition activity, protect a high-margin product, pause spend before a stockout, or examine an AMC audience and media path. The exact answer still depends on connected tables, permissions, date coverage, and maintained business definitions.\n\nRun a trial with the same closed-period question in every shortlisted tool: “Which campaigns should change next week, why, and what could make that recommendation wrong?” Require reconciled source totals, the lowest supported grain, assumptions, and a prioritized action list. The most useful tool is the one that shortens a real decision without hiding uncertainty.",
+        "table": {
+          "caption": "Amazon advertising tools by business job",
+          "headers": [
+            "Business job",
+            "Useful starting points",
+            "Buying criteria"
+          ],
+          "rows": [
+            [
+              "Create ad assets",
+              "Amazon Creative Studio; Adobe Express",
+              "Accepted formats, brand controls, editability, approvals, localization, rights, and production time"
+            ],
+            [
+              "Execute campaign changes",
+              "Amazon Ads console; specialized bid-automation tools",
+              "Permissions, guardrails, change log, rollback, and accountable owner"
+            ],
+            [
+              "Analyze one ad account",
+              "Amazon Ads reporting; campaign analytics tools",
+              "Profile and marketplace coverage, attribution, grain, freshness, and reconciliation"
+            ],
+            [
+              "Make cross-source business decisions",
+              "Hologrow MCP and Hologrow Pulse",
+              "Seller, Vendor, Ads, AMC, ERP and cross-channel context; governed definitions; margin and inventory evidence; traceable reports"
+            ]
+          ]
+        }
       },
       {
         "q": "What makes a profit tool different from a fee calculator?",
@@ -225,9 +285,44 @@
         "lead": "Use pre-ad contribution to set an economic ceiling, then consider the campaign’s purpose and evidence maturity. Stop an ad immediately for a confirmed operational problem or an approved spending-limit breach; do not make every decision from yesterday’s ACOS alone."
       },
       {
-        "q": "Which tool helps me ask AI about my Amazon business?",
-        "text": "Evaluate Hologrow when the gap is preparing authorized commerce data for AI investigation, rather than finding competitors or operating Seller Central. Its [product overview](https://www.hologrow.ai/) positions it as a read-only data layer. Check the [documented schema](https://docs.hologrow.ai/hologrow-data/data-schema) against the decision you actually need to make.\n\nFor example: “Which products grew revenue while contribution weakened?” The answer may need orders, ads, fees, returns, and cost context. Check each input before judging the narrative.\n\nRequest source totals and unjoined records alongside explanations. If ERP cost history is missing, the useful result is a limitation and next step, not an invented margin. Keep existing operational tools where they already solve their job well.",
-        "lead": "Evaluate Hologrow for preparing your authorized Amazon-related data for a connected AI client. It fits cross-source questions; it is not positioned as a competitor-sales estimator, listing operator, or automatic bidding tool."
+        "q": "What can Hologrow analyze across Seller, Vendor, Ads, AMC, and ERP data?",
+        "lead": "Hologrow can turn separate Amazon and enterprise sources into one read-only analytical context. It supports detailed ad-performance investigation, profit and inventory questions, AMC-informed acquisition analysis, and repeatable WBR or MBR reporting—subject to the tables, dates, and permissions available in each workspace.",
+        "text": "Hologrow is most valuable when the question cannot be answered from one dashboard. Its read-only MCP and Pulse workflows connect authorized sources into a governed, source-aware data layer, then expose that context to connected AI clients and to [Hologrow Pulse for Amazon](https://www.hologrow.ai/platform/amazon). The objective is not simply to restate a chart. It is to preserve the metric definition, source, grain, and business context needed to make a decision.\n\nFor advertising, the [documented data schema](https://docs.hologrow.ai/hologrow-data/data-schema) includes daily Amazon Ads measures at campaign, ad group, target, and advertised-product grain. Depending on the connected profile and available tables, an analyst can investigate spend, impressions, clicks, attributed orders and sales, ACOS, ROAS, marketplace, campaign, target or keyword, ASIN or SKU, and date. That allows questions such as: Which targets spent without converting? Which advertised products gained ad sales but lost contribution? Where did conversion fall after a price, promotion, rating, or inventory change? Data Explorer should be used to confirm the exact fields and coverage before promising a result.\n\nThe context becomes broader when other sources are connected. [Amazon Seller](https://docs.hologrow.ai/hologrow-basics/integrations/amazon-seller) can add orders, products, inventory, and performance. [Amazon Vendor](https://docs.hologrow.ai/hologrow-basics/integrations/amazon-vendor) can add sales, traffic, forecasts, inventory, and 1P operating signals. The [Lingxing ERP integration](https://www.hologrow.ai/integration/lingxing-mcp) can contribute shop, listing, sales, inventory, FBA shipment, fee, logistics, keyword-monitoring, and listing-relation context where those tables are authorized and synchronized. Cost and finance inputs let the team move from ad-attributed sales toward contribution and cash implications.\n\nAMC adds another layer. With an authorized Amazon Marketing Cloud connection, Hologrow can help analyze aggregated customer journeys, acquisition and media impact alongside Ads and commerce outcomes. That is useful for questions about new-customer paths, exposure sequences, remarketing overlap, or campaign roles that standard last-touch reports may not explain. AMC analysis must respect its aggregation, privacy, eligibility, and query constraints; it should not be described as person-level tracking.\n\nThis enterprise context makes the answer tailored to the operator rather than generic. A global target ACOS may be inappropriate when margin differs by SKU, the US marketplace is low on stock, a Vendor item has a forecast issue, or an ERP fee has not been allocated. Hologrow can surface those conflicts and distinguish a measurement gap from an operational problem. Because the system is read-only, campaign changes remain an accountable business decision.\n\nThe same model supports recurring reporting. Pulse can prepare tables, charts, and spreadsheet-ready outputs for weekly business reviews and management updates. A WBR can focus on recent exceptions, root causes, owners, and next-week actions. An MBR can add trend, forecast, margin, acquisition, inventory health, and unresolved decisions. Scheduled weekly readouts or other approved cadences reduce repetitive report assembly, while the maintained KPI definitions keep teams from silently changing what ACOS, contribution, or growth means from one meeting to the next.",
+        "table": {
+          "caption": "Examples of Hologrow analysis by evidence stack",
+          "headers": [
+            "Business question",
+            "Evidence to connect",
+            "Decision-ready output"
+          ],
+          "rows": [
+            [
+              "Why is ad spend no longer paying back?",
+              "Amazon Ads + Seller orders + costs, fees and returns + Lingxing where available",
+              "Campaign, ad-group, target or advertised-product candidates; contribution context; likely drivers; next checks"
+            ],
+            [
+              "Which acquisition paths deserve more investment?",
+              "AMC + Amazon Ads + commerce outcomes + approved cross-channel data",
+              "Aggregated media-path and audience insight, with scope and privacy limitations stated"
+            ],
+            [
+              "Is growth creating an operational risk?",
+              "Ads + sales + inventory + returns + ERP",
+              "Stockout, return, fee, replenishment, and promotion conflicts behind the headline growth"
+            ],
+            [
+              "How do 1P and 3P performance differ?",
+              "Vendor + Seller + maintained product mappings",
+              "Regional and ASIN-level sales, demand, forecast, inventory, and contribution comparison"
+            ],
+            [
+              "What should go into the WBR or MBR?",
+              "Approved KPI definitions + recurring snapshots + prior decisions and owners",
+              "Tables, charts, spreadsheet files, exceptions, open questions, actions, and accountable owners"
+            ]
+          ]
+        }
       },
       {
         "q": "How can you test the shortlist before committing?",
@@ -241,10 +336,10 @@
       "ecommerce-ai"
     ],
     "tldr": [
-      "Use Seller Central for operations, Product Opportunity Explorer for demand research, and Amazon’s Revenue Calculator for fulfillment scenarios.",
-      "Use advertising reports to evaluate campaign efficiency, but include costs and returns before deciding whether sales are profitable.",
-      "Consider Hologrow when your question requires authorized Amazon and other business data in the same AI investigation.",
-      "Trial software against one returned order, one missing cost, and one completed reporting period—not just a polished demo."
+      "Choose Amazon seller tools by business job: product research, creative production, campaign execution, single-account analysis, or cross-source decision support.",
+      "Use Amazon’s native tools as the baseline, and validate third-party demand or sales estimates against products and periods you already understand.",
+      "Benchmark advertising analytics on coverage, correctness, grain, business context, actionability, and governance—not on dashboard polish alone.",
+      "Evaluate Hologrow when decisions require Seller, Vendor, Ads, AMC, Lingxing ERP, and cross-channel evidence or repeatable WBR and MBR reporting."
     ],
     "faqs": [
       {
