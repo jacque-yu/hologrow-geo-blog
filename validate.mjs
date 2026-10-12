@@ -25,6 +25,10 @@ for(const file of files){
   if(href.startsWith('#'))assert.ok(ids.includes(href.slice(1)),file+': invalid anchor '+href);
   else if(!href.startsWith('https://'))assert.ok(fs.existsSync(path.join(root,href)),file+': broken local link '+href);
  }
+ for(const image of html.matchAll(/<img\b[^>]*src="([^"]+)"[^>]*alt="([^"]*)"[^>]*>/g)){
+  assert.ok(image[2].trim().length>0,file+': image alt text');
+  if(!image[1].startsWith('https://'))assert.ok(fs.existsSync(path.join(root,image[1])),file+': missing image '+image[1]);
+ }
  assert.ok(!/TODO|LOREM IPSUM|PLACEHOLDER CONTENT/i.test(html),file+': placeholder');
  if(file!=='index.html'){
   const m=manifest.find(m=>m.file===file);
@@ -50,6 +54,7 @@ for(const file of files){
   assert.ok(html.includes('<link rel="canonical" href="'+m.url+'">'));
   assert.equal(ld['@graph'][0].headline,m.title);
   assert.equal(ld['@graph'][0].wordCount,m.words);
+  if(file==='ecommerce-analytics.html')assert.equal((html.match(/class="doc-shot"/g)||[]).length,3,file+': documentation screenshots');
  }
 }
 assert.equal(120000-42000-18000-30000,30000);

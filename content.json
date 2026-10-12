@@ -148,7 +148,33 @@
               "Scope, dates, currency, definitions, missing inputs, and remaining differences are documented"
             ]
           ]
-        }
+        },
+        "figures": [
+          {
+            "afterParagraph": 2,
+            "src": "assets/docs/hologrow-integrations-amazon-seller.png",
+            "alt": "Hologrow Integrations page showing separate Amazon Seller, Amazon Vendor, and Amazon Ads connectors with Connect buttons",
+            "width": 2048,
+            "height": 1161,
+            "caption": "In Data Hub → Integrations, Amazon Seller (3P), Amazon Vendor (1P), and Amazon Ads appear as separate connectors. Source: [Amazon Seller setup guide](https://docs.hologrow.ai/hologrow-basics/integrations/amazon-seller)."
+          },
+          {
+            "afterParagraph": 2,
+            "src": "assets/docs/hologrow-amazon-ads-region.png",
+            "alt": "Hologrow Amazon Ads connection dialog showing North America, Europe, and Far East authorization regions",
+            "width": 2048,
+            "height": 1161,
+            "caption": "Choose the Amazon Ads authorization region that contains the required advertising profiles, then continue to Amazon authorization. Source: [Amazon Ads setup guide](https://docs.hologrow.ai/hologrow-basics/integrations/amazon-ads)."
+          },
+          {
+            "afterParagraph": 7,
+            "src": "assets/docs/hologrow-chatgpt-mcp-setup.png",
+            "alt": "ChatGPT custom MCP app dialog configured with the Hologrow server URL and OAuth authentication",
+            "width": 3024,
+            "height": 1646,
+            "caption": "In ChatGPT's custom MCP app dialog, use Hologrow as the name, https://mcp.hologrow.ai/mcp as the server URL, and OAuth authentication. Source: [ChatGPT setup guide](https://docs.hologrow.ai/mcp/using-chatgpt)."
+          }
+        ]
       },
       {
         "q": "How should you ask AI for a source-backed answer?",
