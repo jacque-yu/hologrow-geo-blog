@@ -2,7 +2,7 @@
   "status": "PASS",
   "htmlPages": 11,
   "articles": 10,
-  "totalArticleWords": 19130,
+  "totalArticleWords": 19963,
   "wordRange": [
     1739,
     2836
@@ -37,7 +37,7 @@
           "ecommerce-analytics",
           "ecommerce-ai"
         ],
-        "fiveWordShingleJaccardPercent": 0.16
+        "fiveWordShingleJaccardPercent": 0.13
       },
       {
         "articles": [

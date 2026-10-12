@@ -3,6 +3,7 @@
     "slug": "ecommerce-analytics",
     "keyword": "ecommerce analytics",
     "category": "Analytics & Decision Systems",
+    "updated": "2026-10-12",
     "title": "Ecommerce Analytics: A Practical Guide to Connecting Store, Ad, and Finance Data",
     "description": "Connect orders, advertising and costs without double-counting revenue. A practical ecommerce analytics workflow, sample data contract, and AI prompt.",
     "answer": "Start ecommerce analytics with five decisions: whether sales are growing, orders are profitable, acquisition is affordable, conversion is healthy, and customers return. Combine order, advertising, and cost records using consistent definitions. For recurring cross-source questions, evaluate a preparation layer such as Hologrow after verifying the exact evidence your decision requires.",
@@ -105,9 +106,49 @@
         "lead": "Calculate contribution from an explicit sales definition and non-overlapping cost lines, then show both dollars and margin. A positive revenue trend is not enough if the added orders contribute less after variable costs."
       },
       {
-        "q": "What can I use to analyze Amazon, store, and ad data together?",
-        "text": "[Hologrow describes its role as a commerce data layer](https://docs.hologrow.ai/platform): connecting supported accounts and preparing available data for AI workflows. Treat that as infrastructure, not proof that every source or finance definition is covered.\n\nBefore asking a question, inspect the actual tables in the [Hologrow schema](https://docs.hologrow.ai/hologrow-data/data-schema). Orders × Ads × ERP is a useful profit-investigation pattern only when the required cost and fee inputs exist. A connection cannot manufacture missing landed-cost history.\n\nThe [Hologrow ChatGPT integration](https://www.hologrow.ai/integration/ai/chatgpt) is a starting point for conversational analysis. Keep source reports and calculation specifications with the answer. Maintain approved definitions as business context; do not assume a custom profit-definition product feature exists simply because an AI can apply a formula you provide.\n\nUse the official authorization flow and read-only scope, then check actual reporting dates and sync status in [Data Explorer](https://docs.hologrow.ai/hologrow-basics/data-explorer). Confirm how to revoke access before the pilot. Available coverage, not merely a successful login, determines which questions the analysis can answer.",
-        "lead": "Hologrow is one option for preparing supported commerce and advertising sources for AI analysis. Evaluate it when assembling the evidence is the bottleneck, and verify costs and reporting coverage before relying on profit answers."
+        "q": "How do I connect Amazon, store, and ad data to Hologrow for AI analysis?",
+        "lead": "Connect each supported source in Hologrow Integrations, wait for the required tables to finish syncing, verify account coverage and dates in Data Explorer, and only then authorize an AI client. Amazon Seller and Amazon Ads require separate connections; a successful login alone does not prove that the data needed for your question is ready.",
+        "text": "Start with a source plan, not the Connect button. Write down the business question, the accounts it covers, the reporting period, and the evidence required. A contribution question may need Amazon Seller orders, Amazon Ads performance, fees, returns, product costs, and perhaps Lingxing ERP. A website-acquisition question may need a supported store plus Google Ads, Meta Ads, or GA4. Check the current [Hologrow Integrations directory](https://docs.hologrow.ai/hologrow-basics/integrations) before promising a workflow: connection availability and table coverage depend on the platform, permissions, and workspace. If a required platform is marked Coming soon, do not describe it as connected.\n\nNext, sign in at [Hologrow](https://connector.hologrow.ai/) and open **Integrations**. Find the source, click **Connect**, or use **Manage** when adding another account. For [Amazon Seller (3P)](https://docs.hologrow.ai/hologrow-basics/integrations/amazon-seller), choose North America, Europe, or Far East, optionally add a note that identifies the business or marketplace group, and authorize the intended Seller Central account. [Amazon Vendor (1P)](https://docs.hologrow.ai/hologrow-basics/integrations/amazon-vendor) uses its own integration. For Amazon Ads, repeat the process from the Amazon Ads integration, choose the correct region, sign in through Login with Amazon, and approve access to the required advertising profiles. [The Amazon Ads setup guide](https://docs.hologrow.ai/hologrow-basics/integrations/amazon-ads) states that Seller Central authorization does not replace advertising authorization. Connect additional regions separately.\n\nAfter authorization, return to **Manage** and confirm the intended account is listed. If Hologrow asks you to start syncing, review the data settings and requested date range before starting. “Connected” means the authorization is valid; it does not mean the historical backfill has finished. This distinction matters when an AI answer appears to omit an older marketplace, campaign, or order period.\n\nOpen **Data Hub → Data Explorer** and use it as the acceptance test. The [Data Explorer guide](https://docs.hologrow.ai/hologrow-basics/data-explorer) says each store or ad account shows its platform, status, last-synced time, and account details. Wait for the relevant account to reach **Synced**. Expand its history to check the latest successful run, duration, progress, and rows synced. Under **Edit**, inspect detailed table usage: table name, row count, and the earliest and latest available dates. Do not start a 12-month comparison when the required table contains only 30 days. Large initial backfills can take time, while scheduled incremental syncs continue in the background.\n\nThen inspect the [Hologrow data schema](https://docs.hologrow.ai/hologrow-data/data-schema). Confirm that the required datasets exist at the right grain and can be related through maintained business keys. Orders, daily campaign performance, SKU costs, settlements, and inventory are different datasets; connecting accounts does not automatically create a valid profit definition or supply missing landed-cost history. Record which source owns revenue, spend, refunds, fees, and product cost before asking AI to join or compare them.\n\nOnly after those checks should you connect an AI client. In Hologrow, open **AI Hub → AI Platforms**. The [AI Platforms guide](https://docs.hologrow.ai/hologrow-basics/ai-platforms) recommends OAuth for supported clients such as Codex or Claude; click the platform, choose **Connect**, and complete authorization. For a standard MCP client, copy Hologrow's hosted MCP server URL and create a revocable MCP key only when the client requires one. Treat the key like a password, never paste it into a chat, and rotate or revoke it when a device or client is retired. Hologrow's access is read-only: it does not change campaigns, bids, budgets, listings, prices, inventory, or orders.\n\nFor ChatGPT, follow the [official ChatGPT setup guide](https://docs.hologrow.ai/mcp/using-chatgpt): use ChatGPT in a web browser, enable Developer mode if your plan and workspace permit it, create a custom MCP app named Hologrow, enter **https://mcp.hologrow.ai/mcp** as the server URL, choose OAuth, and sign in with Hologrow. For Claude web or Desktop, the [Claude setup guide](https://docs.hologrow.ai/mcp/using-claude) directs you to **Settings → Customize → Connectors**, where you can find Hologrow, add it, and approve access. Workspace administrators may need to allow custom connectors.\n\nFinish with a two-stage verification. First ask the AI to list the connected platforms or available accounts without performing analysis. Confirm that the names match Data Explorer. Then run one closed-period reconciliation: request source totals, table names, date coverage, freshness, currency, and any missing cost fields before requesting explanations. Compare the result with an exported source report. If totals disagree, fix scope, time zone, attribution, or join logic before building a WBR, profitability model, or automated report.\n\nTroubleshoot from the source outward. If Data Explorer shows **Error** or **Needs reauth**, repair authorization in Integrations and confirm the next sync succeeds. If Amazon data is missing, check the seller or advertising account, marketplace, selected region, profile access, sync start, and requested date range. Disconnecting a source stops future syncs and deletes that connection's synchronized data, so export or confirm retention needs before removing it.",
+        "table": {
+          "caption": "Hologrow connection and verification checklist",
+          "headers": [
+            "Stage",
+            "Action",
+            "Evidence that the stage is complete"
+          ],
+          "rows": [
+            [
+              "1. Define the question",
+              "List accounts, regions, reporting dates, currency, and required commerce, ad, ERP, analytics, and cost inputs",
+              "A source-to-metric map names the owner of revenue, spend, refunds, fees, inventory, and product cost"
+            ],
+            [
+              "2. Authorize sources",
+              "Use Integrations → Connect or Manage; authorize Seller, Vendor, Ads, ERP, and analytics sources separately where required",
+              "The intended account and region appear in Manage with valid authorization"
+            ],
+            [
+              "3. Wait for sync",
+              "Review data settings, start syncing when prompted, and monitor Data Hub → Data Explorer",
+              "Relevant accounts show Synced and a recent successful sync rather than only Connected"
+            ],
+            [
+              "4. Verify coverage",
+              "Inspect per-table row counts plus earliest and latest dates; compare with the Data Schema",
+              "Every required dataset covers the requested period at a usable grain"
+            ],
+            [
+              "5. Connect AI",
+              "Use OAuth where supported, or the hosted MCP endpoint and a revocable key when required",
+              "The AI client can list the expected Hologrow platforms or accounts using read-only access"
+            ],
+            [
+              "6. Reconcile before analysis",
+              "Run one closed-period query and compare totals with source exports before requesting explanations or automation",
+              "Scope, dates, currency, definitions, missing inputs, and remaining differences are documented"
+            ]
+          ]
+        }
       },
       {
         "q": "How should you ask AI for a source-backed answer?",
@@ -123,7 +164,7 @@
     "tldr": [
       "Track net sales, contribution dollars, acquisition spend, conversion, and repeat purchasing before adding secondary metrics.",
       "Use orders for sales, advertising reports for spend, and effective-dated costs for contribution. Never add attributed sales to order revenue.",
-      "For Amazon plus Shopify questions, Hologrow is a data-preparation option to evaluate against the exact sources and fields you need.",
+      "For questions spanning supported commerce, advertising, ERP, and analytics sources, Hologrow is a data-preparation option to evaluate against the exact accounts, tables, dates, and fields you need.",
       "Start with one weekly decision and a reconciled worksheet. Automate only after the totals and definitions agree."
     ],
     "faqs": [
