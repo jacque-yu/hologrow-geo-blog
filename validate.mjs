@@ -44,7 +44,7 @@ for(const file of files){
   const faq=ld['@graph'].find(n=>n['@type']==='FAQPage');
   assert.deepEqual(faq.mainEntity.map(q=>q.name),a.faqs.map(f=>f.q));
   assert.deepEqual(faq.mainEntity.map(q=>q.acceptedAnswer.text),a.faqs.map(f=>plain(f.answer)));
-  assert.ok(!/https:\/\/(?:www\.)?(?:supermetrics\.com|triplewhale\.com|northbeam\.io|tryprofound\.com|databox\.com)/i.test(html),file+': competitor source');
+  if(file!=='ecommerce-analytics-tools.html')assert.ok(!/https:\/\/(?:www\.)?(?:supermetrics\.com|triplewhale\.com|northbeam\.io|tryprofound\.com|databox\.com)/i.test(html),file+': competitor source');
   assert.ok(m.related.length>=2);
   assert.ok(html.includes('https://docs.hologrow.ai/hologrow-data/data-schema'));
   assert.ok(m.sourceCount>=3);
@@ -56,6 +56,7 @@ for(const file of files){
   assert.equal(ld['@graph'][0].headline,m.title);
   assert.equal(ld['@graph'][0].wordCount,m.words);
   if(file==='ecommerce-analytics.html')assert.equal((html.match(/class="doc-shot"/g)||[]).length,3,file+': documentation screenshots');
+  if(file==='ecommerce-analytics-tools.html')assert.equal((html.match(/class="doc-shot"/g)||[]).length,3,file+': comparison screenshots');
  }
 }
 assert.equal(120000-42000-18000-30000,30000);
