@@ -2,10 +2,10 @@
   "status": "PASS",
   "htmlPages": 11,
   "articles": 10,
-  "totalArticleWords": 22284,
+  "totalArticleWords": 23968,
   "wordRange": [
     1739,
-    2975
+    3539
   ],
   "wordCountScope": "Direct answer, TLDR bullets, question sections including tables and prompt labels, and customer FAQ text. Excludes navigation, illustrations, source list, CTA and related reading.",
   "directAnswers": "40–60 words",
@@ -41,6 +41,13 @@
       },
       {
         "articles": [
+          "amazon-seller-software",
+          "omnichannel-analytics"
+        ],
+        "fiveWordShingleJaccardPercent": 0.15
+      },
+      {
+        "articles": [
           "ecommerce-analytics",
           "ecommerce-ai"
         ],
@@ -55,17 +62,10 @@
       },
       {
         "articles": [
-          "ecommerce-analytics",
-          "amazon-seller-software"
+          "ecommerce-ai",
+          "omnichannel-analytics"
         ],
-        "fiveWordShingleJaccardPercent": 0.1
-      },
-      {
-        "articles": [
-          "ecommerce-analytics",
-          "ecommerce-analytics-tools"
-        ],
-        "fiveWordShingleJaccardPercent": 0.09
+        "fiveWordShingleJaccardPercent": 0.11
       }
     ]
   },

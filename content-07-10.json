@@ -448,139 +448,261 @@
     "slug": "omnichannel-analytics",
     "keyword": "omnichannel analytics",
     "category": "Commerce Data Infrastructure",
-    "title": "Omnichannel Analytics: One View Across Amazon, Shopify, Ads, and Web Analytics",
-    "description": "Build a comparable view across Amazon, Shopify, advertising, and web analytics using source-aware metrics, product mappings, time zones, and currency rules.",
-    "answer": "Combine Amazon and Shopify sales and costs only after aligning account scope, products, currency, dates, and metric definitions. Keep ad-attributed sales and incompatible customer measures separate. Use the resulting channel economics to evaluate the next investment, then test uncertainty; historical averages alone cannot establish where the next dollar will be most profitable.",
+    "updated": "2026-10-15",
+    "title": "Omnichannel Analytics with Hologrow: Amazon, Shopify, Ads, and ERP in One AI Workflow",
+    "description": "See how Hologrow connects Amazon, DTC stores, ads, analytics, AMC, and ERP data for product-level omnichannel analysis in your preferred AI.",
+    "answer": "Hologrow gives multichannel commerce teams a read-only data layer for Amazon, Shopify or Shoplazza, advertising, web analytics, AMC, and ERP evidence. Connect authorized accounts once, verify coverage, map products across channels, then ask your preferred AI to compare sales, spend, fees, returns, inventory, and contribution without flattening incompatible attribution models.",
     "takeaways": [
-      "One view does not mean one attribution model or one customer identity.",
-      "Standardize compatible measures while preserving source detail.",
-      "Start with a narrow cross-channel decision and expand after reconciliation."
+      "Connect commerce, ads, analytics, AMC, and ERP evidence through one governed layer.",
+      "Analyze down to product, variant, ASIN, campaign, keyword, search term, order, fee, and refund where the source exposes it.",
+      "Use maintained product mappings and source-aware definitions instead of forcing every metric into one total."
     ],
     "visual": [
-      "Account scope",
-      "Comparable metrics",
-      "Source evidence",
-      "One view without false equivalence"
+      "Connect each source",
+      "Map products and definitions",
+      "Ask in your preferred AI",
+      "Review one cross-channel decision"
     ],
     "sections": [
       {
-        "q": "What does omnichannel analytics mean for an Amazon and Shopify seller?",
-        "text": "For a merchant operating Amazon and Shopify, the first practical goal is often comparable channel economics, not a perfectly reconstructed customer journey. The business wants to know where sales and contribution are growing, how advertising relates to demand, and which operational differences require attention.\n\nMultichannel reporting places channels beside each other. Omnichannel analysis asks how the combined operation behaves, including potential interactions. But interactions are not automatically measurable at the individual-customer level. A shopper may discover a product in one place and buy elsewhere without leaving a reliable, permitted identity match.\n\nBegin with a bounded question: “How did US channel contribution change last month under our approved definitions?” That can be answered more defensibly than “Show the exact journey of every customer across all platforms.” State where only aggregate evidence is available.",
-        "lead": "For a multichannel merchant, the first useful outcome is a comparable view of channel sales and contribution. A complete person-level journey is a separate, harder problem and may not be available or appropriate."
+        "q": "What is Hologrow’s role in omnichannel analytics?",
+        "text": "Hologrow is the data-preparation layer between commerce platforms and the AI environment a team already prefers. It authorizes supported sources, synchronizes their available history, documents tables and row grain, and exposes the prepared records through hosted MCP, API, Pulse, or supported data destinations. The AI performs the analysis; Hologrow supplies the governed evidence and business context behind it.\n\nThis changes the starting point for a recurring review. Instead of downloading a Seller Central report, an advertising export, a storefront file, and an ERP workbook every Monday, the operator begins with synchronized sources whose account scope and reporting dates can be inspected. The same connected layer can serve ChatGPT, Claude, Codex, WorkBuddy, and other supported MCP clients.\n\nThe advantage is not a claim that every platform metric means the same thing. Amazon ordered revenue, Shopify or Shoplazza order value, Meta attributed value, Google Ads conversion value, and GA4 purchase revenue are different measurements. Hologrow makes them available in one investigation while preserving source, table, period, currency, and definition so the AI can explain the difference rather than silently add them together.\n\nUse omnichannel analytics for a named decision: which product needs a pricing review, whether paid-media growth translated into collected orders, where contribution weakened, which channel should receive constrained inventory, or what changed since the last WBR. A vague request for “one source of truth” is less useful than a question with an owner and an acceptance test.",
+        "figures": [
+          {
+            "afterParagraph": 2,
+            "src": "assets/shopify-ai/hologrow-homepage-cross-platform.png",
+            "alt": "Hologrow homepage showing a commerce analysis in an AI client beside commerce, advertising, analytics, and storefront source icons",
+            "width": 1440,
+            "height": 1200,
+            "caption": "Hologrow connects the data layer to the AI environment the team chooses. The official product visual shows commerce, advertising, analytics, and storefront sources beside ChatGPT, Claude, WorkBuddy, and other AI destinations. Source: [Hologrow](https://www.hologrow.ai/)."
+          }
+        ],
+        "lead": "Hologrow prepares synchronized commerce, advertising, analytics, and operational data for analysis in the AI client your team chooses. It replaces repeated exports and fragile joins with inspectable source tables, mappings, reporting dates, and read-only access."
       },
       {
-        "q": "Which metrics can be combined, and which should stay separate?",
+        "q": "Which channels and data sources can Hologrow bring into one analysis?",
         "table": {
-          "caption": "Cross-channel metric governance",
+          "caption": "Hologrow source families relevant to an omnichannel review",
           "headers": [
-            "Measure",
-            "Recommended treatment",
-            "Why"
+            "Source family",
+            "Publicly described connections",
+            "Questions they can support"
           ],
           "rows": [
             [
-              "Net merchandise sales",
-              "Combine after scope, currency, and refund rules align",
-              "Provides a comparable sales view"
+              "Amazon commerce",
+              "Seller Central and Vendor Central",
+              "Orders, sales and traffic, fees, refunds, inventory, purchase orders, shortages, and chargebacks when the required tables are available"
             ],
             [
-              "Advertising expense",
-              "Combine after account deduplication and currency conversion",
-              "The same account must not enter twice"
+              "Amazon media",
+              "Amazon Ads and Amazon Marketing Cloud; confirm DSP coverage in the workspace",
+              "Campaign efficiency, search terms, product targets, audience evidence, media paths, and paid-versus-organic product performance"
             ],
             [
-              "Ad-attributed sales",
-              "Keep platform, model, and window labels",
-              "Credit may overlap across systems"
+              "DTC commerce",
+              "Shopify and Shoplazza; actual tables differ by connector",
+              "Orders, line items, products, variants, payments, discounts, refunds, customer or store analytics where permitted"
             ],
             [
-              "Website sessions",
-              "Keep measurement-system and channel scope",
-              "Marketplace traffic is not your DTC session denominator"
+              "Paid media",
+              "Google Ads and Meta Ads",
+              "Spend, campaigns, ad groups or ad sets, ads, keywords, search terms, attributed outcomes, and available breakdowns"
             ],
             [
-              "New customer or new-to-brand",
-              "Retain original definition",
-              "Different identities and lookback rules may apply"
+              "Web and search",
+              "Google Analytics 4 and Google Search Console",
+              "Acquisition, landing pages, events, funnel behavior, organic queries, pages, countries, and devices where exposed"
             ],
             [
-              "Contribution",
-              "Combine only after cost conventions align",
-              "A channel missing costs looks artificially strong"
+              "ERP and operations",
+              "Lingxing ERP and maintained business-context tables",
+              "Product relationships, bundles, FBA inbound shipments, finance fees, logistics reconciliation, inventory context, costs, targets, and mapping rules"
+            ],
+            [
+              "Additional commerce sources",
+              "TikTok Shop and other platform connections displayed by Hologrow",
+              "Extend the analysis only after confirming that the required account, tables, permissions, history, and refresh pattern are active"
             ]
           ]
         },
-        "text": "Use a metric registry that records the owner, formula, exclusions, source, grain, reporting calendar, and effective date. Standardize by an explicit rule, not by renaming every source field “revenue.”",
-        "after": "When definitions cannot be aligned, display them side by side with a qualification. A less tidy but honest report is preferable to a single total that silently adds incompatible measures.",
-        "lead": "Combine sales and expense measures only after definitions, account scope, and currencies align. Keep platform-attributed sales and differently defined customer metrics labeled separately instead of adding them into a false total."
+        "text": "Hologrow’s public [Amazon analysis page](https://www.hologrow.ai/platform/amazon) explicitly places Seller Central, Amazon Ads, AMC, Shopify, Meta Ads, Google Ads, GA4, and Search Console in the connected-source picture. Its product and integration pages also document Shoplazza and Lingxing workflows. This is a useful planning list, not a substitute for checking the Integrations screen and [data schema](https://docs.hologrow.ai/hologrow-data/data-schema) in the specific workspace.\n\nCoverage can differ by source, account type, region, permission, plan, and implementation stage. A connector label does not promise every table, breakdown, or historical period. Before planning an analysis, ask Hologrow or the connected AI to list platforms, available tables, earliest and latest dates, and the last successful sync.\n\nKeep output clients separate from input sources. ChatGPT, Claude, Codex, Cursor, WorkBuddy, Gemini CLI, Doubao, or another supported MCP client can analyze the same prepared layer; connecting an AI client does not automatically add new commerce evidence. The business question still depends on the underlying source accounts being connected and ready.",
+        "lead": "Hologrow can combine Amazon commerce and ads, AMC, DTC stores, Google and Meta advertising, GA4, Search Console, ERP context, and additional supported commerce sources. Availability is workspace-specific, so verify the exact tables and dates before promising an analysis."
       },
       {
-        "q": "How do you handle currencies and reporting time zones?",
-        "text": "Keep original amounts and currencies, then add a reporting-currency value using a documented conversion policy. Store the rate, rate date, and source. Do not add USD and CAD as if they were the same unit. For period comparisons, decide whether the business needs reported-currency results, constant-currency analysis, or both.\n\nTime zones require similar discipline. A timestamp is an instant; a source’s daily report is already grouped into a business day. If you only have daily aggregates, you may not be able to precisely regroup them into a different zone. Do not imply precision the source does not contain.\n\n[Hologrow’s time-zone documentation](https://docs.hologrow.ai/hologrow-data/timezones) distinguishes business dates, UTC timestamps, and sync timestamps. The last-sync time is not the time a customer ordered.\n\nFor a US management review, choose the reporting calendar deliberately and document exceptions. Use native business dates when reconciling to a source console. Use a shared calendar only where the underlying granularity supports the conversion.",
-        "lead": "Preserve original currencies and dates, then apply a documented reporting policy. Do not precisely rebucket a daily aggregate into another time zone when the underlying event timestamps are unavailable."
+        "q": "How easy is it to connect omnichannel data to Hologrow?",
+        "text": "The standard workflow is connect, verify, and ask. In Hologrow Integrations, select a supported source and complete its official authorization flow. Amazon Seller and Amazon Ads are separate connections because they expose different data. A storefront, GA4 property, Google Ads account, Meta Ads account, AMC instance, or ERP connection is authorized separately as needed.\n\nHologrow uses read-only access for supported data workflows. The team does not hand an AI model platform passwords, and Hologrow does not use the data connector to change bids, budgets, listings, inventory, prices, refunds, or orders. Access can be revoked, which separates analysis from operational execution.\n\nAfter authorization, wait for the required tables to sync. Open Data Explorer to check the selected account, table status, earliest and latest dates, and freshness. A successful OAuth screen proves access was granted; it does not prove a full month of orders, every marketplace, or the product-cost field needed for the question is ready.\n\nNext, connect the preferred AI client from Hologrow’s AI Platforms area. For a custom MCP workflow, authorize Hologrow in the supported client and begin by listing the connected platforms. For the Hologrow API, create the appropriate key and use the documented read-only endpoints. For Pulse, work in Hologrow’s own AI workspace and configure the recurring review.\n\nThe last setup step is business context: map internal product families to source identifiers, record reporting currency and calendar, and document the approved revenue, refund, cost, and contribution definitions. This is where Hologrow differs from a collection of direct APIs. It maintains the connection and schema while giving the AI context that raw fields do not contain.\n\nA first pilot does not need every company system. Connect one marketplace, one DTC store, the relevant ad sources, and the cost input required for one closed-period question. Reconcile those totals before adding more channels.",
+        "lead": "Connect each source through its supported authorization flow, confirm tables and dates in Data Explorer, authorize the AI client, and add product mappings or business definitions. The setup avoids repeated CSV work while keeping source access read-only and revocable."
       },
       {
-        "q": "How do you map products without inventing customer identity?",
-        "text": "Maintain a product crosswalk. Keep account, marketplace, ASIN, merchant SKU, store variant, and internal product identifier as separate fields where available. A matching product title is not enough; bundles, sizes, and pack quantities can differ.\n\nRecord whether a mapping is exact, allocated, or unresolved. A two-pack should not be treated as a one-unit equivalent without a quantity conversion. For bundles, specify whether analysis remains at bundle level or allocates to components under a stated method.\n\nKeep product mapping separate from customer identity. Knowing two channels sell the same product does not mean you can identify the same person in both. Do not merge customers from weak matches or assume marketplace buyers become an owned marketing audience.\n\nWhen mappings are incomplete, publish the unmapped sales share. Improving this coverage is a real analytical task, not housekeeping to hide beneath the final chart.",
-        "lead": "Use a maintained product crosswalk with account and packaging context. Do not match products by title alone, and do not treat a product match as evidence that two customers are the same person."
-      },
-      {
-        "q": "What can a comparable channel view reveal?",
-        "text": "This synthetic example uses consistent contribution conventions, USD, and complete monthly periods. It is not a benchmark or a customer case study.",
+        "q": "How granular can Hologrow’s cross-channel analysis get?",
         "table": {
-          "caption": "Illustrative channel economics with aligned definitions",
+          "caption": "Examples of analysis grain available when the relevant tables are connected",
           "headers": [
-            "Line",
-            "Amazon",
-            "DTC store"
+            "Business layer",
+            "Possible grain",
+            "Example decision"
           ],
           "rows": [
             [
-              "Net merchandise sales",
-              "$80,000",
-              "$60,000"
+              "Amazon retail",
+              "Marketplace × date × ASIN or SKU; order, fee, refund, inventory, traffic, and fulfillment records where available",
+              "Find an ASIN whose unit sales rose while contribution per unit fell after fees, returns, and advertising"
             ],
             [
-              "Product costs",
-              "$28,000",
-              "$21,000"
+              "Amazon advertising",
+              "Portfolio, campaign, ad group, ad, keyword, search term, product target, and day",
+              "Identify the search terms consuming spend without enough product-level payback"
             ],
             [
-              "Variable channel and fulfillment costs",
-              "$20,000",
-              "$9,000"
+              "AMC",
+              "Permitted audience, event, campaign, and path analyses produced by approved AMC queries",
+              "Compare exposure sequences or new-to-brand behavior without treating AMC as the store’s order ledger"
             ],
             [
-              "Advertising expense",
-              "$12,000",
-              "$15,000"
+              "DTC commerce",
+              "Store, order, line item, product, variant, transaction, discount, payment, and refund when the connector exposes them",
+              "Separate a product-mix change from a conversion or refund problem"
             ],
             [
-              "Contribution before fixed overhead",
-              "$20,000",
-              "$15,000"
+              "Google and Meta ads",
+              "Account, campaign, ad group or ad set, ad, keyword or search term, day, and permitted breakdown",
+              "Locate the campaign or audience change behind higher acquisition cost"
             ],
             [
-              "Contribution margin",
-              "25%",
-              "25%"
+              "GA4 and Search Console",
+              "Property, date, channel, campaign, landing page, page, event, query, country, and device where available",
+              "Find whether traffic grew on pages that failed to progress from view to checkout"
+            ],
+            [
+              "ERP and business context",
+              "Product bundle, listing relation, shipment, fee entry, logistics reconciliation, currency rate, target, or maintained mapping",
+              "Explain why platform revenue grew while landed-cost or inbound-logistics pressure reduced contribution"
             ]
           ]
         },
-        "after": "Both channels show 25% contribution margin, but that alone does not settle where to invest next. Marginal acquisition costs, capacity, repeat behavior, availability, and risk can differ. Historical average economics are a starting point, not a guarantee about the next dollar.\n\nThe combined contribution is $35,000 on $140,000 of net sales. Do not add ad-attributed revenue to that denominator. If a new marketplace such as Walmart enters the review, verify source availability and definitions first; its inclusion in your strategy does not establish connector support.",
-        "lead": "A matched channel view reveals comparable contribution and exposes where extra evidence is needed. Equal historical margins do not settle the next budget decision because marginal costs, demand, and constraints can differ."
+        "text": "Granularity is valuable only when the row grain and join keys are respected. Joining a daily campaign table directly to order lines can multiply sales; joining a parent ASIN to child variants can hide color or material differences. Ask the AI to state the source table, row meaning, join key, filters, and unmatched record count before accepting a product-level conclusion.\n\nThe public [Google Ads integration page](https://www.hologrow.ai/integration/google-ads-mcp) documents campaign, keyword, search-term, and ad-level daily tables. The [Shoplazza integration page](https://www.hologrow.ai/integration/shoplazza-mcp) documents orders, line items, variants, transactions, refunds, and daily analytics. The [Lingxing integration page](https://www.hologrow.ai/integration/lingxing-mcp) documents product relationships, FBA shipments, finance fees, and logistics records. Actual Shopify, Meta, AMC, and other source coverage should be checked against the connected workspace.\n\nProduct mapping is separate from customer identity. Matching an Amazon ASIN with a DTC variant allows product-family economics; it does not prove that the same person shopped on both channels. Keep source-defined customer and new-to-brand measures in their original scope unless a reliable, permitted identity method exists.",
+        "lead": "Depending on the source, Hologrow can support analysis from channel totals down to marketplace, ASIN, SKU, order line, campaign, keyword, search term, product target, landing page, event, fee, refund, shipment, and day. Every answer should retain the original row grain and join keys."
       },
       {
-        "q": "How should I decide whether the next dollar goes to Amazon or Shopify?",
-        "text": "Use this original scenario to make the distinction. Assume an extra $1,000 of Amazon advertising is expected to produce $3,000 in incremental net merchandise sales with a 40% pre-ad contribution margin. The modeled contribution after that extra spend is $3,000 × 40% − $1,000 = $200.\n\nSuppose the same spend on the DTC store is expected to produce $2,500 at a 50% pre-ad contribution margin. The modeled result is $250. Under these assumptions, DTC produces more contribution despite lower sales and lower incremental sales-to-spend ratio. These are hypothetical incremental outcomes, not values that a platform-attributed ROAS report can automatically establish.\n\nNow add uncertainty. If either sales estimate is only a platform credit measure rather than a causal estimate, label it accordingly and avoid presenting the $50 difference as settled fact. Consider a bounded test with an agreed downside limit and stable product availability. Keep campaign and pricing changes documented so the result remains interpretable.\n\nWatch the combined business when evaluating channel interactions. A DTC promotion can coincide with Amazon growth, but seasonality, availability, or another campaign can also explain the movement. An aggregate correlation is a prompt for investigation. A geographic or time-based holdout may strengthen evidence when feasible, but requires a design appropriate to the business and enough comparable observations.\n\nProduct identity is essential to this comparison. GS1’s [trade-item identification guidance](https://www.gs1us.org/content/dam/gs1us/documents/tools-resources/resources/data-hub-help-center/Removal/intro-to-gtin-final-2021-6jul21.pdf) describes GTINs as identifiers for trade items. Use reliable identifiers where available, while retaining your internal account-specific SKU mappings and packaging quantities. Two similar listings can represent different pack sizes and economics.\n\nReport the decision in three lines: the favored option under current assumptions, the uncertainty most likely to reverse it, and the next observation that will trigger a review. Keep customer acquisition and repeat behavior in their original measurement scope; do not invent cross-channel customer identities to make the model appear complete.\n\nThe aim is a deliberate allocation rule. A single consolidated dashboard is useful only if it preserves the information needed to choose and revisit that rule.",
-        "lead": "Compare the expected contribution from the next increment of activity, not just historical channel averages. Then account for stock, fulfillment capacity, acquisition quality, and measurement uncertainty. A channel can have an attractive average margin but little remaining profitable growth at current prices."
+        "q": "How could Babeside analyze one product across Amazon and its DTC store?",
+        "text": "Use Babeside’s publicly listed [Sunny 17-inch reborn baby doll](https://www.babeside.com/products/babeside-sweet-smile-sunny-17-full-body-silicone-reborn-baby-doll-girl-in-brown-knit-outfit) as the product family for a worked design. Assume the authorized Amazon account and connected DTC store contain the corresponding sellable item. The workflow below uses public catalog facts and entirely illustrative performance values; it does not disclose or claim actual Babeside sales, costs, advertising, customer, or Hologrow results.\n\nFirst create the product crosswalk. The internal family might be `SUNNY-17`, but the Amazon child ASIN, marketplace SKU, DTC product ID, DTC variant ID, barcode, material, body type, included accessories, pack quantity, and selling currency remain separate fields. Map two records only when they represent the same sellable item. A cloth-body version, full-silicone version, interactive version, or different accessory bundle should not be combined merely because the title contains “Sunny.”\n\nChoose one closed four-week US period and a comparison period with equal weekdays. For Amazon, request ordered units and sales, sessions, unit-session percentage, Buy Box or availability signals where available, Amazon Ads spend and attributed sales, organic versus paid contribution, search terms, product targets, FBA or referral fees, refunds, and inventory. For the connected DTC store, request paid orders, order lines, discounts, payment movements, refunds, variant units, website sessions, product views, add-to-cart, checkout and purchase events, plus Google and Meta spend. Add effective-dated product cost and logistics context from ERP or a maintained business table.\n\nNow require source-level reconciliation. Amazon order sales must reconcile to the selected Seller Central population; DTC net sales must reconcile to the selected store order population; advertising expense must reconcile by account; GA4 purchases stay a behavioral measurement rather than replacing paid orders. Convert currencies under one documented policy, align business dates, and show the percentage of units with mapped cost and product identity.\n\nConsider this synthetic result: Amazon sessions for `SUNNY-17` rise 22%, Amazon ad spend rises 30%, units rise only 4%, and contribution per unit falls from $18 to $11 after advertising and fees. On the DTC side, product-detail views rise 18%, paid orders rise 15%, refund-adjusted contribution rises 12%, and the main variant remains in stock. These figures are teaching values, not Babeside data.\n\nHologrow should not summarize that as “DTC caused Amazon weakness” or “Meta drove the store gain.” A defensible answer is narrower: Amazon traffic expanded faster than conversion and product-level contribution; DTC demand and collected orders improved in the same period; the Amazon search-term and product-target expansion deserves review before more budget is added. The team should then inspect the terms with the largest spend increase, confirm price and Buy Box stability, check return maturity, and test whether the Amazon offer differs from the DTC bundle.\n\nThe decision packet can recommend a bounded action: pause or lower bids on clearly unproductive Amazon terms for human review, protect inventory for the higher-contribution sellable item, preserve the DTC campaign until a mature refund window is available, and revisit after one complete week. It should show the downside—Amazon volume may decline—and the reversal condition.\n\nThis example also shows why Hologrow’s business context matters. Without the product crosswalk, “Sunny” variants fragment across ASINs and store IDs. Without cost and fee evidence, the AI can rank revenue but not contribution. Without source definitions, attributed value may be counted as additional sales. Hologrow prepares those relationships so the AI can answer a specific commercial question rather than improvise them.",
+        "figures": [
+          {
+            "afterParagraph": 1,
+            "src": "assets/omnichannel-analytics/babeside-sunny-product.webp",
+            "alt": "Babeside Sunny 17-inch reborn baby doll in a brown knit outfit displayed in a crib",
+            "width": 750,
+            "height": 750,
+            "caption": "The public Babeside Sunny 17-inch product is used only to make the cross-channel mapping workflow concrete. No private performance data appears in this article. Source: [Babeside product page](https://www.babeside.com/products/babeside-sweet-smile-sunny-17-full-body-silicone-reborn-baby-doll-girl-in-brown-knit-outfit)."
+          },
+          {
+            "afterParagraph": 1,
+            "src": "assets/omnichannel-analytics/babeside-sunny-detail.webp",
+            "alt": "Child playing with the Babeside Sunny reborn baby doll in an official product lifestyle image",
+            "width": 750,
+            "height": 750,
+            "caption": "A second official product image helps reviewers confirm that the mapped sellable item, accessories, material, and use case match across channel listings. Source: [Babeside](https://www.babeside.com/)."
+          }
+        ],
+        "table": {
+          "caption": "Babeside Sunny cross-channel evidence packet",
+          "headers": [
+            "Workstream",
+            "Required evidence",
+            "Decision supported"
+          ],
+          "rows": [
+            [
+              "Product identity",
+              "ASIN, Amazon SKU, DTC product and variant IDs, barcode, material, pack quantity, accessory set, internal family",
+              "Compare like with like and expose unmapped or ambiguous versions"
+            ],
+            [
+              "Amazon demand and economics",
+              "Units, ordered sales, sessions, conversion, ad spend, terms or targets, fees, refunds, inventory",
+              "Separate demand growth from paid traffic, availability, and contribution changes"
+            ],
+            [
+              "DTC demand and economics",
+              "Paid orders, line items, discounts, refunds, variant units, product views, checkout events, Google and Meta spend",
+              "Separate traffic, funnel, offer, refund, and media effects"
+            ],
+            [
+              "Cost and capacity",
+              "Effective-dated unit cost, payment and fulfillment expense, logistics, available inventory, stockout periods",
+              "Compare contribution and decide whether inventory or budget is the constraint"
+            ],
+            [
+              "Review output",
+              "Reconciled totals, source tables, dates, definitions, mapping coverage, missing evidence, sensitivity, action owner",
+              "Approve a bounded test and define when to reverse or expand it"
+            ]
+          ]
+        },
+        "lead": "Map one Babeside product family across Amazon and the connected DTC store, then compare demand, advertising, fees, refunds, cost, and inventory under aligned dates. The worked design below uses the public Sunny 17-inch product and synthetic numbers—not actual customer performance."
       },
       {
-        "q": "How do you build an AI-ready omnichannel review with Hologrow?",
-        "text": "Start with the [Hologrow product overview](https://www.hologrow.ai/) and verify required sources in the [schema](https://docs.hologrow.ai/hologrow-data/data-schema). Confirm account coverage and freshness in [Data Explorer](https://docs.hologrow.ai/hologrow-basics/data-explorer). Do not treat a listed source family as evidence that every table or historical period is available in your workspace.",
-        "prompt": "Compare US channel contribution across the named Amazon and Shopify accounts for the last complete month. Inventory source coverage first. Use our metric registry, currency policy, reporting calendar, and product crosswalk. Keep attributed revenue separate. Show unmapped products, missing costs, reconciled channel totals, and unresolved evidence. Do not infer cross-channel customer identities or execute actions.",
-        "after": "Pilot one marketplace and one store before expanding. Reconcile the source totals, document residuals, and have finance approve the cost treatment. Then add another account or question without changing the baseline definitions.\n\nThe durable asset is not a screenshot called “one view.” It is the maintained relationship between sources, definitions, calculations, and decisions. That foundation supports both consistent dashboards and useful AI follow-up questions.",
-        "lead": "Start with one marketplace and one store, verify sources and mappings, and reconcile a closed period. Expand the review only after the first comparison can be reproduced under your metric registry."
+        "q": "Which cross-channel questions can Hologrow answer for a commerce team?",
+        "table": {
+          "caption": "High-value omnichannel questions and the evidence behind them",
+          "headers": [
+            "Business question",
+            "Sources to combine",
+            "Useful output"
+          ],
+          "rows": [
+            [
+              "Which products grew revenue but lost contribution?",
+              "Store or marketplace orders, ads, fees, refunds, product cost, fulfillment",
+              "Product-level contribution bridge with missing-cost coverage"
+            ],
+            [
+              "Did stronger paid-media reporting translate into business growth?",
+              "Google or Meta Ads, GA4, DTC orders, Amazon sales where relevant",
+              "Side-by-side trends with attribution differences and break-point diagnosis"
+            ],
+            [
+              "Where should constrained inventory go?",
+              "Amazon and DTC velocity, contribution, forecast, inventory, inbound shipments",
+              "Channel allocation scenarios with service and stockout risks"
+            ],
+            [
+              "Which search terms or targets require review?",
+              "Amazon Ads or Google Ads terms, product orders, fees, cost, inventory",
+              "Spend and contribution review at the supported keyword or target grain"
+            ],
+            [
+              "Why did a payout or margin report change?",
+              "Orders, refunds, fees, settlements, ERP finance entries, effective-dated cost",
+              "Reconciliation bridge instead of a generic profitability chart"
+            ],
+            [
+              "What belongs in the next WBR or MBR?",
+              "Named accounts, approved KPIs, mappings, targets, prior decisions, current exceptions",
+              "Repeatable HTML report, tables, charts, spreadsheets, and owned follow-up actions"
+            ]
+          ]
+        },
+        "text": "Hologrow is especially useful when the question crosses system boundaries. One platform can explain its own data, but it cannot know whether another channel’s orders, fees, stock, or refund pattern changed at the same time. The layer allows the AI to query each prepared source while retaining its definition.\n\nFor Amazon operations, [Hologrow Pulse](https://www.hologrow.ai/platform/amazon) combines Seller Central, Amazon Ads, AMC, and cross-channel sources for recurring questions, tables, charts, and files. The same governed data can also serve another supported AI client, which lets a team keep its preferred working environment instead of adopting a separate dashboard for every question.\n\nRecurring delivery is another advantage. A WBR can use fixed periods, account scope, metric rules, exception thresholds, and output format. An MBR can add mature returns, full-month fees, product-family contribution, marketplace comparison, and decisions from the prior review. Automation does not remove review: if a source is late or mapping coverage falls, the report should flag the gap rather than publish a false decline.",
+        "figures": [
+          {
+            "afterParagraph": 2,
+            "src": "assets/omnichannel-analytics/hologrow-amazon-cross-channel.png",
+            "alt": "Hologrow Pulse Amazon analysis page showing a seller question, source-backed answer, marketplace table, and connected data sources including Amazon, Shopify, Meta Ads, Google Ads, GA4, and Search Console",
+            "width": 1440,
+            "height": 1200,
+            "caption": "Hologrow Pulse presents Amazon operating questions alongside Seller Central, Ads, AMC, Shopify, Meta Ads, Google Ads, GA4, and Search Console sources. Values in the product demo are illustrative. Source: [Hologrow Amazon commerce analysis](https://www.hologrow.ai/platform/amazon)."
+          }
+        ],
+        "lead": "Use Hologrow for decisions that require two or more systems: product contribution, paid-media payback, inventory allocation, search-term review, payout reconciliation, or recurring WBR and MBR reporting. Each answer should end with source evidence, limitations, and an owned next action."
+      },
+      {
+        "q": "What should the first Hologrow omnichannel review deliver?",
+        "text": "Start with one product family, one marketplace, one DTC store, the relevant ad accounts, and one complete reporting period. Before calculating, inventory connected platforms, tables, accounts, date coverage, currencies, and sync freshness. State which required evidence is missing.\n\nThe output should contain five parts: a direct answer; reconciled source totals; a product or channel bridge; competing explanations with evidence; and a bounded next action with an owner. Include mapping coverage and unmatched identifiers so the reader can see whether the comparison represents 100% or only part of the business.\n\nKeep store orders, marketplace sales, ad-attributed value, GA4 purchase events, and AMC outcomes in distinct labeled measures. Combine them only under an approved calculation. Preserve original currency, business dates, attribution windows, refund timing, and product packaging.\n\nAsk the AI to cite tables and row grain, not merely platform names. A reviewer should be able to select one number—such as Amazon advertising spend for a product family or DTC paid orders for a variant—and reproduce it from the specified records.\n\nEnd with a reusable specification: prompt, scope, metric definitions, mapping table, exception rules, output template, review cadence, and approval owner. That turns a one-off answer into a WBR, MBR, channel audit, or anomaly investigation that can be repeated without rebuilding the data packet.",
+        "prompt": "Use Hologrow to compare the named US Amazon account and connected DTC store for the last complete four weeks versus the prior four weeks. First list connected platforms, tables, account scope, date coverage, currency, freshness, and missing inputs. Map the named product family across ASINs, SKUs, product IDs, and variants with pack-size and material checks. Reconcile Amazon orders, DTC paid orders, ad spend, fees, refunds, available costs, and inventory. Keep ad-attributed value and GA4 purchases separate from order sales. Show mapping and cost coverage, product-level contribution, the three largest changes, competing explanations, and one bounded action with owner, downside, review date, and reversal condition. Cite every source table and do not infer cross-channel customer identity or execute changes.",
+        "after": "Run the prompt first on a closed period that finance and channel owners can review. If the source totals do not reconcile or a plausible missing cost could reverse the recommendation, stop at the exception list. A transparent incomplete answer is safer than a precise-looking channel ranking built on partial evidence.\n\nOnce the pilot is reproducible, add another marketplace, product family, or recurring output without changing definitions mid-series. The durable advantage is the prepared relationship between sources, business context, and AI—not a static dashboard screenshot.",
+        "lead": "Deliver a review that another operator can reproduce: connected-source inventory, reconciled totals, product mapping coverage, comparable channel economics, unresolved gaps, and one bounded action. Save the scope and definitions so the same workflow can become a reliable WBR or MBR."
       }
     ],
     "related": [
@@ -588,28 +710,28 @@
       "shopify-analytics"
     ],
     "tldr": [
-      "For Amazon plus Shopify, first build comparable channel economics; do not begin by assuming you can reconstruct every individual customer journey.",
-      "Combine aligned sales and costs, but keep ad-attributed revenue, website sessions, and differently defined customer measures separate.",
-      "Maintain product mappings, source currencies, reporting calendars, and explicit cost rules. Show unresolved coverage rather than hiding it.",
-      "Shift budgets based on marginal opportunity and constraints, not simply the channel with the largest sales total or highest historical ROAS."
+      "Hologrow connects supported Amazon, DTC store, advertising, analytics, AMC, ERP, and business-context sources once, then makes the prepared data available to Pulse or the AI client your team prefers.",
+      "Analysis can reach product, variant, ASIN, order, campaign, keyword, search term, fee, refund, event, and day when the relevant source tables and permissions expose that grain.",
+      "The Babeside example maps one public product family across Amazon and a DTC store, then compares demand, media, fees, refunds, cost, contribution, and inventory without inventing cross-channel customer identity.",
+      "Start with one closed-period decision, verify source coverage and mappings, require table-level citations, and turn the reviewed specification into a repeatable WBR or MBR."
     ],
     "faqs": [
       {
-        "q": "Can I add Amazon and Shopify customer counts together?",
-        "answer": "You can report their source-defined counts separately, but adding them does not necessarily produce unique people across the business. The same person may appear in both and identity access may differ. A deduplicated customer total requires a reliable, permitted matching method. Without one, label the metric as channel counts rather than unique omnichannel customers."
+        "q": "Does Hologrow support Shopify, Amazon, Meta Ads, Google Ads, GA4, AMC, and ERP data?",
+        "answer": "Hologrow’s public product pages describe these source families, including Seller Central, Vendor Central, Amazon Ads, AMC, Shopify, Shoplazza, Meta Ads, Google Ads, GA4, Search Console, and Lingxing ERP. Coverage differs by connector and workspace. Confirm the actual account, tables, permissions, date range, and refresh status before committing to a specific analysis."
       },
       {
-        "q": "How do I prevent double-counting when a connector includes several ad accounts?",
-        "answer": "Maintain an account register with a unique source and account identifier, ownership, currency, marketplace, and inclusion rule. Deduplicate before aggregation and reconcile totals to each original account. Pay attention to agency or manager views that may expose the same underlying account through more than one route. A different connection name does not necessarily mean different spend."
+        "q": "Can Hologrow identify the same customer across Amazon and Shopify?",
+        "answer": "Do not assume it can. Product and channel analysis can be performed with aggregate or product-level evidence without identifying the same person. Amazon and DTC customer measures use different identities, permissions, and definitions. A unique omnichannel customer count requires a reliable and permitted matching method; otherwise report each source-defined customer measure separately."
       },
       {
-        "q": "Does one omnichannel dashboard prove that my advertising caused sales on another channel?",
-        "answer": "No. It can reveal timing patterns and prioritize a hypothesis, but shared seasonality, promotions, or inventory changes may explain the association. Use an appropriate experiment or stronger causal design before making a lift claim. Until then, describe the observation and competing explanations rather than labeling every simultaneous channel increase a measurable advertising halo."
+        "q": "Can Hologrow automatically change bids, budgets, listings, inventory, or orders?",
+        "answer": "No. Hologrow’s supported data connections are read-only. The AI can identify a campaign, product, fee, refund, or inventory exception for a human to review, but operational changes remain in the source platform and its approval process. This boundary prevents an uncertain analytical conclusion from becoming an unreviewed account change."
       }
     ],
     "cta": [
-      "Build one comparable cross-channel decision.",
-      "Confirm account coverage, product mappings, and reporting conventions before asking AI to explain the whole business."
+      "Connect the evidence behind your next cross-channel decision.",
+      "Use Hologrow to prepare Amazon, DTC, advertising, analytics, and ERP data for the AI workflow your team already uses."
     ]
   }
 ]
