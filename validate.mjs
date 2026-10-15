@@ -30,6 +30,7 @@ for(const file of files){
   if(!image[1].startsWith('https://'))assert.ok(fs.existsSync(path.join(root,image[1])),file+': missing image '+image[1]);
  }
  assert.ok(!/TODO|LOREM IPSUM|PLACEHOLDER CONTENT/i.test(html),file+': placeholder');
+ assert.ok(!/AI-assisted editorial|prepared with AI assistance/i.test(html),file+': AI editorial label');
  if(file!=='index.html'){
   const m=manifest.find(m=>m.file===file);
   assert.ok(m.answerWords>=40&&m.answerWords<=60,file+': direct answer length');
