@@ -3,133 +3,124 @@
     "slug": "amazon-seller-software",
     "keyword": "amazon seller software",
     "category": "Amazon Data",
-    "title": "Amazon Seller Software: How to Choose Tools for Data, Ads, Profit, and Operations",
-    "description": "Design an Amazon seller software stack around clear ownership, data coverage, permissions, and a repeatable acceptance test—not overlapping feature lists.",
-    "answer": "Choose Amazon seller software by the missing job: operations, advertising, costs, data preparation, or analysis. Keep effective native workflows, price the full implementation, and test exceptions before buying. Hologrow is worth evaluating for cross-source data preparation; it should not be treated as a replacement for every operational system or financial review.",
+    "updated": "2026-10-15",
+    "title": "Best Amazon Seller Software in 2026: Jungle Scout, Helium 10, Hologrow, and Native Tools",
+    "description": "Compare Amazon seller software by real business job: product research, keywords, listings, operations, advertising, profit analysis, and cross-channel AI reporting.",
+    "answer": "The best Amazon seller software depends on the job. Start with Seller Central for native operations, consider Jungle Scout or Helium 10 for Amazon product, keyword, and listing research, and evaluate Hologrow when the harder problem is analyzing first-party Amazon, advertising, ERP, and web data together in your preferred AI. These products are often complementary, not interchangeable.",
     "takeaways": [
-      "Buy for a missing workflow, not an overlapping feature.",
-      "Separate systems that act from systems that analyze.",
-      "Test portability, revocation, and exception handling before migration."
+      "Choose software by decision, not feature count.",
+      "Separate market estimates from first-party business evidence.",
+      "Use Hologrow when cross-source context is the missing layer."
     ],
     "visual": [
-      "Systems of action",
-      "Data preparation",
-      "Analysis and review",
-      "A stack with clear ownership"
+      "Research and listings",
+      "Operations and ads",
+      "Cross-source business data",
+      "A decision-ready seller stack"
     ],
     "sections": [
       {
-        "q": "What belongs in an Amazon seller software stack?",
-        "text": "Software selection gets expensive when every team solves the same problem in isolation. The ads team buys a reporting tool, finance buys another, and operations exports spreadsheets into both. The result can be three versions of revenue without a clear owner.\n\nStart by assigning responsibilities. [Seller Central](https://sell.amazon.com/tools/seller-central) remains a native operational reference for the Amazon business. Other systems can support research, reporting, costs, or workflows, but ownership should remain explicit.",
+        "q": "What is the best Amazon seller software in 2026?",
+        "lead": "There is no single best tool for every seller. Seller Central is the operational foundation; Jungle Scout and Helium 10 are practical shortlists for Amazon research and listing workflows; Hologrow is the stronger fit when the question depends on your own Amazon, advertising, ERP, finance, and web context.",
+        "text": "A useful shortlist begins with the decision you need to make. A founder choosing a new niche needs market-demand and keyword evidence. A catalog team rewriting a listing needs search-term and content support. A finance or growth lead asking why contribution fell needs actual orders, fees, refunds, advertising, cost, and possibly non-Amazon data. Those are different jobs.\n\nThe table below is a task-fit comparison based on the vendors’ public documentation, not an independent performance benchmark. Capabilities and plan limits change, so verify the exact marketplace, account, fields, and workflow during a trial.",
         "table": {
-          "caption": "Software responsibilities before vendor selection",
+          "caption": "Amazon seller software: practical shortlist by business job",
           "headers": [
-            "Layer",
-            "Accountable function",
-            "What must stay explicit"
+            "Tool",
+            "Best fit",
+            "What it is not the default choice for"
           ],
           "rows": [
             [
-              "Operations",
-              "Orders, catalog, inventory, fulfillment actions",
-              "Who can change source records and approve exceptions"
+              "Amazon Seller Central",
+              "Listings, orders, inventory, payments, promotions, native reports, and Amazon account actions",
+              "Unified analysis across non-Amazon advertising, web analytics, ERP, and finance context"
             ],
             [
-              "Advertising",
-              "Campaign measurement and authorized management",
-              "Whether recommendations also execute changes"
+              "Jungle Scout",
+              "Product discovery, keyword research, competitor and market signals, launch planning, and seller analytics",
+              "A governed data layer for a company’s complete cross-platform operating context"
             ],
             [
-              "Finance and costs",
-              "Cost inputs, reconciliation, management definitions",
-              "Who signs off on contribution and close"
+              "Helium 10",
+              "Broad Amazon suite spanning product and keyword research, listing optimization, advertising, analytics, and operations",
+              "Independent accounting approval or every non-Amazon source a multichannel business may use"
             ],
             [
-              "Data preparation",
-              "Connections, source records, mappings, coverage",
-              "What is missing, stale, or unmatched"
-            ],
-            [
-              "Analysis",
-              "Dashboards, AI investigations, decision records",
-              "Evidence, assumptions, reviewer, action owner"
+              "Hologrow",
+              "Governed first-party commerce and ad data, cross-source investigation, AI-accessible analysis, and recurring operating reports",
+              "Competitor sales estimation, Amazon keyword discovery, listing editing, or automatic bid execution"
             ]
           ]
         },
-        "after": "These are logical responsibilities, not a requirement to buy five products. One product may cover several. The purpose is to prevent a missing responsibility from disappearing behind an impressive feature matrix.",
-        "lead": "You need clear ownership of operational actions, ads, costs, data preparation, and reporting—not necessarily five subscriptions. Write down which system performs each job before adding another product."
+        "after": "The fastest buying rule is simple: if the input is estimated market demand, shortlist a research suite; if the input is an Amazon account action, start with the native system or an authorized action tool; if the answer requires actual company data from several systems, shortlist a governed preparation and analysis layer. A large feature count does not repair a missing cost ledger or an unsupported source."
       },
       {
-        "q": "How do you define requirements before comparing vendors?",
-        "text": "Write requirements as observable outcomes. “Supports Amazon” is too broad. “Can retrieve the required US seller account data, preserve source identifiers, and reproduce our weekly net-sales total under the approved definition” is testable.\n\nRecord marketplace, account type, reporting periods, fields, and expected refresh needs. Seller and Vendor workflows differ; support for one does not establish the other. An integration logo is not a guarantee that your required financial-event table is available.\n\nSeparate must-haves from conveniences. A finance reviewer may require effective-dated costs and explainable exceptions. A channel manager may value a familiar dashboard. Both matter, but the dashboard cannot compensate for missing costs.\n\nWrite down your current workaround and how often it fails. That gives the evaluation an economic baseline. If the workaround takes one hour monthly, a complex implementation may be harder to justify than fixing a daily multi-account reconciliation.",
-        "lead": "Describe the report or action you must complete, including account type, marketplace, fields, history, and reviewer. “Supports Amazon” is not a usable requirement if the financial events you need are missing."
+        "q": "Which Amazon tools should every seller try before buying another subscription?",
+        "lead": "Use the Amazon tools already available to your account before paying for overlapping software. Seller Central covers core operations, Product Opportunity Explorer supports niche research, and eligible registered brands can use Brand Analytics for search and customer behavior insights.",
+        "text": "[Seller Central](https://sell.amazon.com/tools/seller-central) is where sellers manage listings, pricing, orders, inventory, fulfillment, promotions, payments, and native reports. It should remain the source of operational truth even when another interface makes analysis or execution easier. Document which outside tools have permission to read or change the account.\n\nFor product discovery, [Product Opportunity Explorer](https://sell.amazon.com/tools/product-opportunity-explorer) groups customer search and purchase behavior into niches and exposes demand, competition, search, review, and return signals. Use it to form a launch hypothesis; Amazon itself notes that opportunities are guidance rather than a guaranteed outcome. A promising niche still needs supplier, landed-cost, compliance, and cash-flow validation.\n\nFor eligible brands, [Amazon Brand Analytics](https://sell.amazon.com/tools/amazon-brand-analytics) adds Search Query Performance, Search Catalog Performance, Top Search Terms, repeat-purchase, demographics, and market-basket views. Access requires a Professional selling account and a Brand Representative role for a brand enrolled in Brand Registry.\n\nNative tools are usually enough when the question stays inside one Amazon account and the team can reconcile the required report. Add third-party software when it materially improves a repeated job: discovering products, researching keywords, managing listings, operating ads, coordinating multiple accounts, or joining Amazon evidence with the rest of the business."
       },
       {
-        "q": "Should you buy an all-in-one platform or a modular stack?",
-        "text": "An all-in-one platform can reduce handoffs when its definitions and capabilities fit the business. A modular stack can preserve strong existing tools and make replacement less disruptive. Neither architecture is inherently superior.\n\nCompare the cost of ownership, not just subscriptions. Include configuration, source administration, mappings, manual corrections, reviewer training, and switching costs. Ask who will maintain each integration and how a failure appears to the user.\n\nFor a small seller with one marketplace and uncomplicated costs, native reports and a well-maintained model may be enough. For a multichannel operator, a shared preparation layer can become more attractive because the same inputs support several downstream questions. This is an architectural judgment, not a universal revenue threshold.\n\nAvoid two tools executing the same action without clear coordination. Duplicate reporting is inconvenient; conflicting inventory or campaign changes can affect customers and spend.",
-        "lead": "Choose all-in-one when it removes handoffs without compromising important definitions. Choose modules when you already have reliable operational tools and need a specific missing capability. Compare ongoing ownership, not just license price."
+        "q": "Jungle Scout vs Helium 10: which should an Amazon seller choose?",
+        "lead": "Choose Jungle Scout when your main gap is an approachable product-discovery and keyword-research workflow. Choose Helium 10 when you want a broader Amazon toolkit for research, reverse-ASIN keywords, listing optimization, advertising, analytics, and operations. Trial both with the same ASIN and decision before choosing.",
+        "text": "[Jungle Scout’s current Catalyst page](https://www.junglescout.com/products/catalyst/) emphasizes Product Database, Keyword Scout, browser-based product evaluation, keyword-rank tracking, review automation, profitability views, and competitor or market signals. That makes it a sensible shortlist for a seller deciding what to launch, how demand appears to be changing, or which search terms deserve closer inspection. Treat estimated competitor sales and market size as directional evidence, not audited competitor financials.\n\n[Helium 10’s tool directory](https://www.helium10.com/tools/) presents a wider suite: Black Box and Xray for product research; Cerebro and Magnet for keyword research; and Listing Analyzer, Listing Builder, Scribbles, advertising, analytics, and operational tools. It is a practical candidate when one Amazon-focused team wants more of those workflows in a single environment. The wider suite is only valuable if the team will maintain and use the relevant modules.\n\nDo not choose from a generic “accuracy” claim. Give both products the same seed keyword, five known ASINs, marketplace, and launch thesis. Compare keyword relevance, trend history, marketplace coverage, exportability, plan limits, and how clearly estimates are labeled. Then validate the short list against Amazon’s own Product Opportunity Explorer or Brand Analytics where available.\n\nNeither product automatically answers every business question. Product and keyword intelligence can help estimate demand and improve discovery, but it does not establish whether your last promotion earned contribution after actual fees, refunds, freight, and off-Amazon acquisition costs. That second question requires first-party operating data."
       },
       {
-        "q": "How much should I budget beyond the subscription price?",
-        "text": "Use this synthetic annual ownership example—not a vendor price list. Option A charges $250 per month, needs 20 setup hours, and takes six maintenance hours each month. At an internal labor assumption of $50 per hour, first-year cost is $3,000 in licenses plus $1,000 setup plus $3,600 maintenance: $7,600.\n\nOption B charges $450 per month, needs ten setup hours, and takes two maintenance hours each month. With the same labor assumption, the total is $5,400 plus $500 plus $1,200: $7,100. Option B has the higher sticker price but lower modeled ownership cost. Replace every assumption with your own trial evidence; the example does not establish either product’s performance.\n\nThen evaluate risk separately. An inexpensive tool that requires broader source permissions than the task needs is not made acceptable by its labor savings. [Amazon’s SP-API documentation](https://developer-docs.amazon.com/sp-api/docs/onboarding-overview) distinguishes authorization from the roles controlling operations. An application connection is not the same thing as permission for every action.\n\nAsk who owns the following recurring work: expired authorization, changed source fields, a new marketplace, new product mappings, and a finance-definition change. “The platform handles it” is incomplete unless the response includes what is automatic, what raises an alert, and what the customer must do.\n\nDo not put speculative sales uplift into the base-case savings calculation. You can model a separate upside scenario, but a software purchase should first be understandable in terms of demonstrated workflow improvement. A faster report may help decisions; it does not, by itself, prove incremental revenue.\n\nFinally, ask what happens on exit. Can the business retain its calculations, retrieve permitted historical outputs, and remove access? Which files or definitions belong to the customer? Resolve these questions while the project is still a procurement decision, not after an analyst depends on the new workflow for month-end close.",
-        "lead": "Budget for implementation, ongoing maintenance, and reviewer time as well as the license. The cheapest subscription can be the more expensive workflow if someone repeatedly repairs mappings or reconciles unexplained totals. Ask for costs by account, marketplace, destination, history, and usage before comparing quotes."
+        "q": "How is Hologrow different from Jungle Scout and Helium 10?",
+        "lead": "Hologrow is differentiated by company-specific context rather than competitor-demand research. It prepares authorized first-party commerce, advertising, ERP, and analytics data in a governed layer, then makes that data available for cross-source analysis in Hologrow Pulse or supported AI clients through OAuth and MCP.",
+        "text": "The distinction is the evidence. Jungle Scout and Helium 10 are useful when the task starts with a market, competitor ASIN, keyword, or listing. Hologrow becomes relevant when the task starts with your accounts and a management question: Why did profit fall despite higher Amazon sales? Did paid growth create contribution after refunds and product cost? Which marketplace, ASIN, and campaign should be discussed in this week’s operating review?\n\nHologrow’s current [Integrations directory](https://docs.hologrow.ai/hologrow-basics/integrations) lists Amazon Seller, Amazon Vendor, Amazon Ads, Amazon DSP, Lingxing ERP, Shoplazza, Google Ads, Meta Ads, GA4, and Google Search Console, with coverage depending on permissions and workspace tables. That source mix can put orders, products, inventory, settlements, ads, ERP records, site behavior, and acquisition context into one investigation. The directory currently marks Shopify and several other commerce platforms as coming soon, so verify live availability rather than relying on a logo or an older sales page.\n\nThe governed [Hologrow data schema](https://docs.hologrow.ai/hologrow-data/data-schema) documents table grain, business keys, history, and refresh behavior. This matters because “join sales and ads” is not a calculation. A defensible answer must preserve marketplace, account, reporting date, currency, attribution rules, and the difference between an order item, settlement line, campaign day, and inventory snapshot. More enterprise context helps the AI tailor an investigation, but it does not eliminate the need for an approved cost definition.\n\nHologrow’s public [Amazon analysis page](https://www.hologrow.ai/platform/amazon) also describes Pulse workflows combining Seller Central, Amazon Ads, AMC, and cross-channel evidence for multi-region analysis, advertising efficiency, margin questions, and repeatable weekly or executive reporting. Because AMC and enterprise source availability may depend on commercial setup, confirm the exact workflow and tables for your workspace during evaluation.\n\nFinally, Hologrow can bring the data to the AI interface a team already prefers. Its [AI Platforms guide](https://docs.hologrow.ai/hologrow-basics/ai-platforms) documents OAuth or hosted MCP connections for Codex, Claude, ChatGPT, Cursor, Gemini CLI, Hermes Agent, and other compatible clients. The access is read-only: users can investigate and generate tables, charts, files, or reports without Hologrow changing campaigns, bids, budgets, listings, orders, or source settings."
       },
       {
-        "q": "What should an acceptance test actually contain?",
-        "text": "Use a small test pack chosen by the people who will review the output. Include ordinary rows and awkward cases. The goal is not to make software fail; it is to discover whether the workflow remains understandable when business reality is untidy.",
+        "q": "Can Hologrow, Jungle Scout, and Helium 10 work together?",
+        "lead": "Yes. A practical stack can use Jungle Scout or Helium 10 for market and keyword discovery, Seller Central or an authorized ad tool for execution, and Hologrow for cross-source first-party analysis and AI reporting. Keep one accountable owner for every metric and action.",
+        "text": "Do not force one product to do every job. A research suite can identify a keyword opportunity. Seller Central or an ad platform can implement the approved listing or campaign change. Hologrow can then evaluate the business result using actual commerce, advertising, cost, and other available context. The handoff should preserve the hypothesis, action date, affected ASINs, and success measure.",
         "table": {
-          "caption": "A suggested acceptance test—not a product benchmark",
+          "caption": "Recommended Amazon software stack by business situation",
           "headers": [
-            "Test case",
-            "Expected behavior",
-            "Reviewer"
+            "Business situation",
+            "Recommended starting stack",
+            "First useful question"
           ],
           "rows": [
             [
-              "Refund posted after the sale period",
-              "Preserve both dates and explain the chosen treatment",
-              "Finance"
+              "New seller validating a product",
+              "Seller Central + Product Opportunity Explorer; trial Jungle Scout or Helium 10 if deeper research saves material time",
+              "Is demand durable, competition manageable, and landed contribution plausible?"
             ],
             [
-              "Missing product cost",
-              "Flag missing coverage; do not silently assume zero",
-              "Finance"
+              "Amazon-first brand improving discoverability",
+              "Seller Central + Brand Analytics + one research/listing suite",
+              "Which relevant queries lose clicks or purchases, and what listing evidence supports a change?"
             ],
             [
-              "Same SKU text in two accounts",
-              "Keep account identity; do not combine by name alone",
-              "Operations"
+              "Multi-marketplace operator",
+              "Existing operational tools + Hologrow for governed cross-account analysis",
+              "Which marketplace and ASIN drove the change after currency, refunds, fees, and ads?"
             ],
             [
-              "Late advertising conversion",
-              "Retain reporting context and permit a explained revision",
-              "Paid media"
+              "Brand using Amazon plus other ad and web channels",
+              "Channel execution tools + Hologrow + preferred AI client",
+              "How did Amazon, Google, Meta, and site behavior contribute to profitable demand?"
             ],
             [
-              "Revoked connection",
-              "Show stale coverage rather than imply fresh data",
-              "System owner"
-            ],
-            [
-              "One product sold as a bundle",
-              "Use a maintained mapping; expose ambiguous joins",
-              "Merchandising"
+              "Finance or leadership WBR/MBR",
+              "Source systems + Hologrow Pulse or MCP-connected AI + approved metric definitions",
+              "What changed, why is that explanation supported, and which owner acts next?"
             ]
           ]
         },
-        "after": "Agree reconciliation tolerances before seeing the result. A difference may be explainable, but every material residual needs an owner. Test exports and retrieval of historical work as well as the initial dashboard. A successful demonstration is not the same as a maintainable implementation.",
-        "lead": "Test ordinary transactions plus late refunds, missing costs, duplicate SKU names, and connection failure. Set acceptance criteria before the demo so the team evaluates the workflow rather than the presentation."
+        "after": "This architecture works only if estimated market data and realized company results remain labeled. Never relabel estimated competitor revenue as verified sales, add attributed ad sales to order revenue, or let an AI invent missing product cost. The final decision packet should state sources, definitions, missing inputs, and the person responsible for execution."
       },
       {
-        "q": "Where should Hologrow sit in this architecture?",
-        "text": "Position [Hologrow](https://www.hologrow.ai/) in the preparation layer when evaluating it for authorized first-party data and AI analysis. It is not a replacement for every operational workflow. Its read-only positioning means an analytical investigation should not be presented as automatic listing or campaign management.\n\nUse the [Hologrow data schema](https://docs.hologrow.ai/hologrow-data/data-schema) to test field coverage. Use its [refresh documentation](https://docs.hologrow.ai/hologrow-data/data-fetch-periods) to distinguish initial availability from historical coverage and ongoing refresh. Do not convert a typical history window into a contractual guarantee.\n\nThe proof of value should be a question that crosses existing boundaries: for example, how sales, ads, refunds, and cost context explain a product’s contribution change. If your only need is to update a listing, evaluate an operational workflow instead.",
-        "lead": "Evaluate Hologrow as preparation infrastructure for supported first-party data and connected AI analysis. Keep listing changes, bidding, fulfillment, and accounting approval in the systems and teams responsible for those actions."
+        "q": "What should I ask during an Amazon seller software demo?",
+        "lead": "Ask the vendor to complete one real decision with your marketplace, account type, date range, and exceptions. Require source coverage, plan limits, permissions, definitions, exports, maintenance ownership, and the exact actions the product can or cannot take.",
+        "text": "Begin with a decision, not a tour: “Decide whether to keep funding this ASIN after advertising, refunds, fees, and product cost.” For research software, use a product thesis you understand and require the tool to separate estimates from Amazon first-party signals. For an analytics layer, use a closed period that finance has already reconciled.\n\nAsk seven questions: Which marketplaces and account types are supported? Which fields and historical periods are available on our plan? What is estimated versus first-party? How fresh is each table? What changes can the software execute? How are permissions revoked? What can we export if we leave?\n\nTest awkward rows. Include a refund posted after the sale period, a missing product cost, the same SKU text in two accounts, a late ad conversion, and a connection that needs reauthorization. The product should expose missing or stale evidence instead of silently filling it.\n\nScore the complete workflow: preparation time, reviewer time, reconciliation difference, useful decisions, and ongoing maintenance. Do not justify a purchase with speculative revenue uplift. A credible benefit is a repeated reduction in manual work or a decision the team can make with better evidence."
       },
       {
-        "q": "How do you migrate without losing control of reporting?",
-        "prompt": "Evaluate this proposed software stack against our current weekly review. Identify the owner of each source, the exact metric definition, data gaps, write permissions, and switching risks. Reproduce one closed period and the exception test pack. Report unresolved differences before recommending migration.",
-        "text": "Run old and new outputs side by side for a closed period and a newly completed period. Compare definitions before comparing numbers. Preserve the old report, the new calculation, and a bridge for differences; do not overwrite the baseline during the trial.\n\nAssign a cutover owner and an explicit rollback condition, such as unexplained material variance or missing accounts. Train the reviewer to recognize stale data and incomplete coverage rather than simply showing where to click.\n\nAfter acceptance, remove redundant access through an approved process and document the surviving stack. Revisit the architecture when marketplaces, cost rules, or team responsibilities change. The objective is not fewer tools at any cost; it is fewer unowned gaps between tools.",
-        "lead": "Run old and new reports in parallel, explain their differences, and cut over only after the owner accepts the results. Preserve a rollback path and access to prior reporting periods."
+        "q": "What questions can I ask Hologrow from ChatGPT, Claude, or Codex?",
+        "lead": "Ask questions that require your authorized first-party context: profit drivers, paid versus organic performance, marketplace comparisons, inventory risk, refund and fee anomalies, and recurring WBR or MBR narratives. Always specify accounts, dates, currency, metric definitions, and required evidence.",
+        "prompt": "Using our connected Hologrow data, compare the last two complete weeks for the US Amazon business. First list the accounts, source tables, date coverage, freshness, currency, and missing cost fields. Reconcile order sales before joining Amazon Ads. Then identify the three largest ASIN-level changes in contribution dollars, separating unit volume, net price, refunds, Amazon fees, product cost, and ad spend. For each finding, show the calculation, evidence, uncertainty, and recommended human owner. Do not change campaigns, bids, listings, or source settings.",
+        "text": "A good first query is narrow and auditable. Ask the AI to inventory available accounts and tables before analysis. Then reconcile a closed period with the source report. Only after scope and totals agree should it explain changes or propose actions.\n\nOther useful questions include: Which ASINs grew ad-attributed sales while contribution weakened? Which marketplace has rising sessions but falling conversion? Which campaigns spent more without a comparable change in ordered revenue? Which products face an inventory risk after considering recent sales velocity? Which refunds, fees, or settlements explain the gap between commercial sales and cash movement?\n\nFor recurring reporting, preserve a metric contract and output format. A WBR can require an executive summary, KPI table, three supported drivers, exceptions, owners, and next actions. An MBR can add marketplace, product-line, acquisition, margin, and inventory views. Hologrow’s public Pulse page describes scheduled weekly readouts and higher-frequency reporting; validate the desired cadence and source coverage for your plan.\n\nThe AI should cite the source tables and state limitations. If ERP cost history is incomplete, the answer should report cost coverage and avoid calling the result final profit. If an advertising attribution window differs from the order-sales period, show both rather than forcing them to match."
       }
     ],
     "related": [
@@ -137,28 +128,28 @@
       "ecommerce-analytics-tools"
     ],
     "tldr": [
-      "Map software to five responsibilities: operations, advertising, finance, data preparation, and analysis. One product may cover several, but every responsibility needs an owner.",
-      "Choose an all-in-one system when its definitions fit; choose modules when replacing strong existing workflows would add risk.",
-      "Require a costed implementation plan, an exception test pack, and a documented exit process before committing.",
-      "Place Hologrow in the data-preparation evaluation when the bottleneck is cross-source investigation, not operational execution."
+      "Start with Amazon’s native tools. Add Jungle Scout or Helium 10 when product, keyword, competitor, listing, or Amazon-focused workflow depth justifies the subscription.",
+      "Choose Hologrow when the question requires actual Amazon Seller, Vendor, Ads, DSP, ERP, web, or non-Amazon advertising context in one governed analysis.",
+      "Jungle Scout and Helium 10 can complement Hologrow: research suites help decide what to test; Hologrow helps evaluate what happened across the business.",
+      "Hologrow can serve governed data to supported AI clients through OAuth or MCP, but its access is read-only and should not be described as automatic bid, listing, or order execution."
     ],
     "faqs": [
       {
-        "q": "Should I cancel existing seller software as soon as a trial works?",
-        "answer": "No. First verify a closed period, a recent period, and the exceptions that matter to the team. Keep the existing workflow until the replacement owner accepts the differences and knows how to respond to failures. A trial can prove a useful capability without proving that every dependency of the old system has been replaced."
+        "q": "Can Hologrow replace Jungle Scout or Helium 10?",
+        "answer": "Not for every job. Keep or trial Jungle Scout or Helium 10 when you need competitor-oriented product discovery, keyword research, rank tracking, or listing optimization. Evaluate Hologrow when you need governed analysis of your own connected commerce, advertising, ERP, and analytics data. Many businesses can use a research suite and Hologrow together because they answer different questions."
       },
       {
-        "q": "Can an agency use the same reporting setup for multiple sellers?",
-        "answer": "Potentially, but it must preserve account separation, authorization scope, and client-specific definitions. Identical SKU names across clients are not shared identities. Test one client’s access and outputs independently from another’s, and document who can see aggregated versus client-level results. Confirm the actual product’s multi-account controls rather than assuming a generic integration guarantees them."
+        "q": "Can Hologrow analyze Amazon Ads and AMC data?",
+        "answer": "Hologrow’s public Amazon page describes workflows using Seller Central, Amazon Ads, AMC, and cross-channel sources, including advertising efficiency and customer-acquisition analysis. Amazon Ads is listed in the self-serve integration documentation; AMC availability may depend on the enterprise setup. Confirm the exact AMC workflow, profiles, tables, history, and reporting grain for your workspace before purchase."
       },
       {
-        "q": "What if my business sells through both Seller Central and Vendor Central?",
-        "answer": "Treat them as separate requirements. A third-party seller’s retail orders and fees do not map directly to a vendor’s wholesale economics and terms. Ask for the relevant sources and fields for each, then build an explicit management bridge if you need a combined view. Do not reuse the seller profit formula unchanged for the vendor business."
+        "q": "Can I use Hologrow inside my favorite AI tool?",
+        "answer": "Yes, when the client and your plan support the documented connection method. Hologrow’s AI Platforms documentation covers OAuth or MCP access for tools including Codex, Claude, ChatGPT, Cursor, Gemini CLI, and other compatible clients. The connection is read-only: the AI can investigate synchronized data, but Hologrow does not change campaigns, listings, budgets, orders, or source settings."
       }
     ],
     "cta": [
-      "Evaluate the missing layer in your seller stack.",
-      "Compare the required source fields and reporting workflow before replacing a tool your team already relies on."
+      "Ask your Amazon data a business question, not just a dashboard filter.",
+      "Connect the supported sources behind your weekly decision, verify the available tables, and use the AI workflow your team already prefers."
     ]
   },
   {

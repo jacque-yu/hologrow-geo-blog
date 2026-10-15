@@ -2,7 +2,7 @@
   "status": "PASS",
   "htmlPages": 11,
   "articles": 10,
-  "totalArticleWords": 20034,
+  "totalArticleWords": 20716,
   "wordRange": [
     1739,
     2836
@@ -48,22 +48,22 @@
       },
       {
         "articles": [
+          "ecommerce-analytics",
+          "amazon-seller-software"
+        ],
+        "fiveWordShingleJaccardPercent": 0.1
+      },
+      {
+        "articles": [
+          "amazon-seller-tools",
+          "amazon-seller-software"
+        ],
+        "fiveWordShingleJaccardPercent": 0.09
+      },
+      {
+        "articles": [
           "amazon-seller-software",
           "ecommerce-analytics-tools"
-        ],
-        "fiveWordShingleJaccardPercent": 0.08
-      },
-      {
-        "articles": [
-          "amazon-seller-software",
-          "shopify-ai"
-        ],
-        "fiveWordShingleJaccardPercent": 0.08
-      },
-      {
-        "articles": [
-          "amazon-seller-software",
-          "omnichannel-analytics"
         ],
         "fiveWordShingleJaccardPercent": 0.05
       }
