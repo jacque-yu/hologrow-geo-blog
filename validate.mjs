@@ -58,7 +58,7 @@ for(const file of files){
   if(file==='ecommerce-analytics.html')assert.equal((html.match(/class="doc-shot"/g)||[]).length,3,file+': documentation screenshots');
   if(file==='ecommerce-analytics-tools.html')assert.equal((html.match(/class="doc-shot"/g)||[]).length,3,file+': comparison screenshots');
   if(file==='shopify-ai.html')assert.equal((html.match(/class="doc-shot"/g)||[]).length,4,file+': Shopify and cross-platform product screenshots');
-  if(file==='omnichannel-analytics.html')assert.equal((html.match(/class="doc-shot"/g)||[]).length,4,file+': Hologrow and Babeside cross-channel screenshots');
+  if(file==='omnichannel-analytics.html')assert.equal((html.match(/class="doc-shot"/g)||[]).length,2,file+': Hologrow cross-channel screenshots');
  }
 }
 assert.equal(120000-42000-18000-30000,30000);

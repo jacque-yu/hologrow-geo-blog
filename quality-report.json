@@ -2,10 +2,10 @@
   "status": "PASS",
   "htmlPages": 11,
   "articles": 10,
-  "totalArticleWords": 23968,
+  "totalArticleWords": 23900,
   "wordRange": [
     1739,
-    3539
+    3471
   ],
   "wordCountScope": "Direct answer, TLDR bullets, question sections including tables and prompt labels, and customer FAQ text. Excludes navigation, illustrations, source list, CTA and related reading.",
   "directAnswers": "40–60 words",
