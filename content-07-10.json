@@ -3,6 +3,7 @@
     "slug": "shopify-ai",
     "keyword": "shopify ai",
     "category": "Commerce Operations",
+    "updated": "2026-10-15",
     "title": "Shopify AI: Using Store Data for Analysis vs Selling Through AI Assistants",
     "description": "Understand the difference between AI for operating your Shopify business and AI shopping channels. Learn what data, permissions, and measurement each requires.",
     "answer": "Use merchant-side Shopify AI for store work and private business analysis; use eligible shopping channels for public product discovery. Start with native assistance for questions contained in Shopify, and evaluate a cross-source layer when other evidence is needed. Connecting business data does not guarantee product recommendations or citations in shoppers’ AI answers.",
@@ -67,6 +68,16 @@
       {
         "q": "Should I use Shopify’s native AI or connect a separate data layer?",
         "text": "Shopify documents report and query assistance in its [Sidekick guidance](https://help.shopify.com/en/manual/ai-powered-tools/sidekick/help-and-guidance). Its [setup documentation](https://help.shopify.com/en/manual/ai-powered-tools/sidekick/set-up) also states that store changes require approval. These are current platform capabilities, not proof that any particular question can be answered without preparation.\n\nConsider three merchant questions. “Which variants produced the most gross profit in my store?” starts with Shopify’s own reports and cost coverage. “Why did store sales fall while Google Ads spend rose?” requires aligned advertising and store evidence. “Which products became less profitable across Amazon and Shopify?” adds marketplace economics and consistent product mappings. The third question is a data-integration problem before it becomes a prompting problem.\n\nUse a field-level checklist rather than an app-name comparison. For each question, list the exact evidence: variant or SKU, order period, net sales, discounts or reversals, advertising expense, and relevant cost records. Mark which inputs are available natively, which exist elsewhere, and which the business has never maintained. No connector can recover the last category without new work.\n\nRun the simplest adequate workflow first. If a native report answers the first question, keep it. If the second requires recurring exports and reconciliations, test whether a managed preparation workflow reduces that burden. If the third lacks a cross-channel product map, build the map before expecting useful AI comparisons.\n\nA practical evaluation output is a one-page source map: question, required input, system of record, owner, freshness, and access method. Use it to review [Hologrow’s schema](https://docs.hologrow.ai/hologrow-data/data-schema) and the actual connected workspace. This turns “Does it support Shopify?” into the more useful question, “Can this workflow answer our specific commercial question?”\n\nKeep permission choices independent of convenience. If you only need analysis, additional store-editing authority is not automatically beneficial. Conversely, a read-only data workflow should not be purchased as a replacement for an operational assistant when the real need is making approved catalog changes.",
+        "figures": [
+          {
+            "afterParagraph": 1,
+            "src": "assets/shopify-ai/shopify-sidekick-admin.png",
+            "alt": "Shopify admin order screen with Sidekick open in a panel and preparing an international expansion task list",
+            "width": 1800,
+            "height": 1151,
+            "caption": "Shopify’s official example shows Sidekick working inside the store admin. It can use Shopify context and propose tasks for review; a separate data layer becomes relevant when the evidence extends beyond Shopify. Source: [Shopify admin redesign](https://www.shopify.com/blog/admin-new-look)."
+          }
+        ],
         "lead": "Start with native assistance when the question can be answered inside your Shopify store. Evaluate a separate layer when you need evidence outside that scope or a repeatable cross-account workflow. This avoids paying for a connection that merely repeats a report you already have."
       },
       {
@@ -76,13 +87,41 @@
       },
       {
         "q": "How does selling through ChatGPT differ from analyzing store data?",
-        "text": "As checked October 10, 2026, Shopify describes ChatGPT as a discovery-focused referral channel. Customers complete the purchase through the merchant’s online-store checkout, shown in an in-app browser or a browser tab. Shopify’s current eligibility guidance includes selling to US customers and meeting catalog and policy requirements. See [Selling on ChatGPT](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/chatgpt).\n\nThis public shopping workflow does not require exposing private margin analyses to shoppers. Product facts, availability, policies, and eligibility belong to the discovery project; private operating records belong to the merchant-analysis project.\n\nDo not turn channel eligibility into a promise of placement. Being available to a catalog or crawler is not the same as being selected for a specific recommendation. Measure actual qualified visits and outcomes rather than treating a setup confirmation as growth.\n\nFor the broader channel picture, consult [Shopify agentic storefronts](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts). Channel behavior can change, so revisit official requirements before rollout.",
+        "text": "As checked October 15, 2026, Shopify describes ChatGPT as a discovery-focused referral channel. Customers complete the purchase through the merchant’s online-store checkout, shown in an in-app browser or a browser tab. Shopify’s current eligibility guidance includes selling to US customers and meeting catalog and policy requirements. See [Selling on ChatGPT](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/chatgpt).\n\nThis public shopping workflow does not require exposing private margin analyses to shoppers. Product facts, availability, policies, and eligibility belong to the discovery project; private operating records belong to the merchant-analysis project.\n\nDo not turn channel eligibility into a promise of placement. Being available to a catalog or crawler is not the same as being selected for a specific recommendation. Measure actual qualified visits and outcomes rather than treating a setup confirmation as growth.\n\nFor the broader channel picture, consult [Shopify agentic storefronts](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts). Channel behavior can change, so revisit official requirements before rollout.",
+        "figures": [
+          {
+            "afterParagraph": 1,
+            "src": "assets/shopify-ai/shopify-agentic-dashboard.jpg",
+            "alt": "Shopify Agentic dashboard showing illustrative sessions and orders from ChatGPT, Google AI Mode, Microsoft Copilot, and Meta",
+            "width": 2175,
+            "height": 1800,
+            "caption": "Shopify’s Agentic dashboard concept groups AI shopping channels and their discovery or order activity. The figures shown are part of Shopify’s product illustration, not Hologrow customer results. Source: [Shopify Agentic Storefronts](https://www.shopify.com/agentic-storefronts)."
+          }
+        ],
         "lead": "Shopping discovery uses eligible product information to help a customer find an offer. An internal analysis uses private business evidence to answer an operator’s question. Neither workflow automatically provides the benefits of the other."
       },
       {
         "q": "Where does Hologrow fit for a Shopify merchant?",
-        "text": "Evaluate Hologrow when the analytical question spans store, advertising, and web evidence. Its [ChatGPT integration page](https://www.hologrow.ai/integration/ai/chatgpt) describes that investigation pattern. Confirm required Shopify and advertising fields in the [data schema](https://docs.hologrow.ai/hologrow-data/data-schema) and in your connected workspace.\n\nA useful pilot is a weekly explanation of mismatched trends: ad spend increased, measured traffic changed, and store orders moved differently. Keep those as separate measurements until the evidence supports a narrower conclusion.\n\nThis workflow is not a catalog-submission service and should not be advertised as making your products appear in AI shopping answers. Likewise, private data access does not guarantee that a public article about your brand will be cited. Those outcomes depend on different systems and evidence.",
-        "lead": "Consider Hologrow when a Shopify question requires other supported sources, such as advertising or marketplace evidence. Verify the necessary tables before treating the connection as a complete business model."
+        "text": "Evaluate Hologrow when the analytical question crosses Shopify and another business system. Its official site describes a read-only ecommerce data layer that prepares supported store, advertising, ERP, and analytics data for AI clients. That matters when the answer needs Shopify orders alongside Google Ads or Meta spend, GA4 behavior, Amazon activity, ERP cost, or an internal product map—not simply another view of one Shopify report.\n\nStart with the decision and connect only the evidence it needs. Authorize the supported accounts in Hologrow, let the required tables sync, and verify account coverage, currency, reporting dates, and latest successful refresh. Then check the [data schema](https://docs.hologrow.ai/hologrow-data/data-schema) and Data Explorer before asking an AI client to compare sources. A green connection status proves authorization; it does not prove that every required cost, order, campaign, or product-mapping field is present.\n\nA practical cross-platform pilot is: “Google and Meta spend rose, GA4 sessions increased, but Shopify orders fell—where did the trends first diverge?” A multichannel seller can extend the same review with Amazon orders, advertising, fees, returns, and ERP cost. Require the answer to name the source table, account, date range, currency, and missing evidence. Store orders, analytics purchases, and ad-attributed conversions should remain distinct measurements unless a reviewed rule reconciles them.\n\nAfter the sources are ready, connect Hologrow to a supported AI client through its MCP workflow. The [ChatGPT integration guide](https://www.hologrow.ai/integration/ai/chatgpt) shows the sequence: connect business accounts, verify sync status and dates, authorize the Hologrow connector in the AI client, confirm the connected platforms, and then ask a scoped business question. Hologrow supplies synchronized evidence; the AI organizes the investigation, and a human reviews the conclusion before changing budgets, listings, or operations.\n\nThis workflow is not a catalog-submission service and should not be advertised as making products appear in AI shopping answers. It is also read-only: the analytical layer can identify campaigns, SKUs, or discrepancies for review, but it does not replace Sidekick or another approved operational tool for editing the store. Private data access and public AI visibility are separate systems with separate success measures.",
+        "figures": [
+          {
+            "afterParagraph": 1,
+            "src": "assets/shopify-ai/hologrow-homepage-cross-platform.png",
+            "alt": "Hologrow homepage showing an AI analysis workspace beside icons for commerce, advertising, analytics, and AI platforms including Shopify, Amazon, Meta, Google Ads, ChatGPT, Claude, and WorkBuddy",
+            "width": 1440,
+            "height": 1200,
+            "caption": "Hologrow positions the product between supported commerce and marketing sources and the AI client a team already uses. The diagram illustrates the architecture; actual source availability and table coverage must be verified in the workspace. Source: [Hologrow](https://www.hologrow.ai/)."
+          },
+          {
+            "afterParagraph": 4,
+            "src": "assets/shopify-ai/hologrow-multichannel-ai-workflow.jpg",
+            "alt": "ChatGPT analysis produced with Hologrow data showing a performance trend chart, source table label, written findings, and product-level decline chart",
+            "width": 2940,
+            "height": 1654,
+            "caption": "An official Hologrow example shows an AI answer with the source label, period comparison, narrative findings, and a chart. It is an illustrative workflow, not a guarantee that every connected account will return the same fields or conclusion. Source: [Hologrow ChatGPT connector](https://www.hologrow.ai/integration/ai/chatgpt)."
+          }
+        ],
+        "lead": "Use Hologrow when a Shopify decision also depends on supported advertising, analytics, marketplace, or ERP evidence. It prepares those sources for the AI client you choose, while keeping the connection read-only and the source scope inspectable."
       },
       {
         "q": "What should your first Shopify AI project look like?",
